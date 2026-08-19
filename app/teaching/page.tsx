@@ -1,3 +1,23 @@
 import { PageHero, SiteFrame } from "../components";
-const courses=[{term:"2026 · Spring",code:"COSE361",title:"Artificial Intelligence"},{term:"2026 · Spring",code:"AAI112",title:"Natural Language Processing"},{term:"2025 · Fall",code:"DATA304",title:"Big Data Analysis"},{term:"2025 · Fall",code:"AAI114",title:"Text Mining"},{term:"2025 · Spring",code:"COSE361",title:"Artificial Intelligence"}];
-export default function Teaching(){return <SiteFrame><PageHero index="04" eyebrow="Teaching" title="Foundations for asking better questions." intro="Courses at the intersection of artificial intelligence, natural language, and data-intensive systems."/><section className="course-list shell">{courses.map((c,i)=><article key={c.term+c.code}><span className="pub-no">{String(i+1).padStart(2,"0")}</span><span>{c.term}</span><h2>{c.title}</h2><strong>{c.code}</strong></article>)}</section><section className="teaching-note shell"><span className="eyebrow">Teaching philosophy</span><h2>Understand the foundations.<br/>Build what matters.</h2></section></SiteFrame>}
+import { courses, courseYears } from "../content/teaching";
+import { sitePath } from "../site-path";
+
+export default function Teaching() {
+  return <SiteFrame>
+    <PageHero index="04" eyebrow="Teaching" title="Teaching" intro="Courses at the intersection of artificial intelligence, natural language, and data-intensive systems." />
+    <section className="course-list shell">
+      {courseYears.map((year) => {
+        const yearCourses = courses.filter((course) => course.year === year);
+        return <section className="teaching-year" key={year}>
+          <div className="publication-year"><h2>{year}</h2><span>{yearCourses.length} {yearCourses.length === 1 ? "course" : "courses"}</span></div>
+          <div className="teaching-courses">
+            {yearCourses.map((course) => <article key={course.id}>
+              <span className="course-semester">{course.semester}</span>
+              <div><span className="course-code">{course.code}</span><h3><a href={sitePath(course.href)}>{course.title}<span aria-hidden="true"> →</span></a></h3></div>
+            </article>)}
+          </div>
+        </section>;
+      })}
+    </section>
+  </SiteFrame>;
+}

@@ -1,8 +1,51 @@
 import { PageHero, SiteFrame } from "../components";
-const areas = [
-  {n:"01",title:"Recommender Systems",image:"/media/research-rec.jpg",copy:"We develop personalized systems that learn user preferences from limited feedback, balance accuracy and efficiency, and generalize across domains and modalities.",topics:["LLM-based recommendation","Continual recommendation","Efficient sequential models","Multi-behavior learning"]},
-  {n:"02",title:"Information Retrieval",image:"/media/research-ir.png",copy:"We build retrieval systems for scientific literature and specialized domains, reducing reliance on labels while using structure, interaction, and language models to improve relevance.",topics:["Scientific retrieval","Generative retrieval","RAG and grounding","Interactive search"]},
-  {n:"03",title:"Data & Web Mining",image:"/media/research-data.png",copy:"We turn large, unstructured, and evolving data into actionable knowledge for search, recommendation, forecasting, and decision support.",topics:["Web-scale data mining","Multimodal learning","Time-series forecasting","Knowledge structures"]},
-];
-function ResearchIcon({index}:{index:number}){return <div className="research-icon" aria-hidden="true">{index===0?<svg viewBox="0 0 64 64"><circle cx="20" cy="20" r="7"/><circle cx="44" cy="20" r="7"/><circle cx="32" cy="44" r="7"/><path d="M26 22h12M23 26l6 12M41 26l-6 12"/></svg>:index===1?<svg viewBox="0 0 64 64"><circle cx="28" cy="28" r="16"/><path d="m40 40 13 13M21 28h14M28 21v14"/></svg>:<svg viewBox="0 0 64 64"><path d="M12 50h42M16 45V29h9v16M29 45V17h9v28M42 45V24h9v21"/></svg>}</div>}
-export default function Research(){return <SiteFrame><PageHero index="01" eyebrow="Research" title="Research" intro="We work across recommendation, retrieval, and data mining."/><section className="area-list shell">{areas.map((a,i)=><article className="area" key={a.title}><div className="area-visual"><ResearchIcon index={i}/><strong>{a.n}</strong></div><div className="area-copy"><span>Research Area {Number(a.n)}</span><h2>{a.title}</h2><p>{a.copy}</p><ul>{a.topics.map(t=><li key={t}>⊙&nbsp; {t}</li>)}</ul></div></article>)}</section><section className="collab shell"><span className="section-label">Collaborators</span><h2>Research grows through shared perspectives.</h2><p>We collaborate with academic institutions and industry partners in Korea and around the world.</p></section></SiteFrame>}
+import { majorResearchProjects, researchAreas, researchCollaborators } from "../content/research";
+import { sitePath } from "../site-path";
+
+export default function Research() {
+  return <SiteFrame>
+    <PageHero index="01" eyebrow="Research" title="Research" intro="We work across recommendation, retrieval, and data mining." />
+
+    <section className="research-areas-simple shell" aria-labelledby="research-areas-heading">
+      <div className="research-section-intro">
+        <h2 id="research-areas-heading">Research areas</h2>
+        <p>We research personalized intelligent systems that integrate multimodal knowledge sources and update effectively over time.</p>
+      </div>
+      <div className="research-area-columns">
+        {researchAreas.map((area) => <article className="research-area-summary" id={area.id} key={area.id}>
+          <span className="research-area-number">{area.number}</span>
+          <h3>{area.title}</h3>
+          <p>{area.description}</p>
+          <ul>{area.topics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
+          <a className="research-area-link" href={sitePath(`/publications?topics=${area.publicationTopic}#publication-filter`)} aria-label={`View publications related to ${area.title}`}>Related publications <span aria-hidden="true">→</span></a>
+        </article>)}
+      </div>
+    </section>
+
+    <section className="research-projects" aria-labelledby="major-projects-heading">
+      <div className="shell">
+        <div className="research-projects-heading">
+          <h2 id="major-projects-heading">Major R&amp;D Projects</h2>
+          <p>We are always open to a wide range of collaborations.</p>
+        </div>
+        <ul className="research-project-list">
+          {majorResearchProjects.map((project) => <li className="research-project-item" key={project.id}>
+            <h3>{project.title}</h3>
+            <strong>{project.partner}</strong>
+          </li>)}
+        </ul>
+      </div>
+    </section>
+
+    <section className="research-collaborators shell" aria-labelledby="collaborators-heading">
+      <div className="research-section-intro">
+        <h2 id="collaborators-heading">Academic and Industry Collaborators</h2>
+      </div>
+      <div className="collaborator-logo-grid">
+        {researchCollaborators.map((collaborator) => <div className="collaborator-logo" key={collaborator.id}>
+          <img src={sitePath(collaborator.image)} alt={collaborator.name} />
+        </div>)}
+      </div>
+    </section>
+  </SiteFrame>;
+}

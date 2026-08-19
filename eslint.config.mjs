@@ -23,6 +23,10 @@ const eslintConfig = defineConfig([
   jsxA11y.flatConfigs.recommended,
   next.configs["core-web-vitals"],
   {
+    rules: {
+      // Public lab media is served as-is from GitHub Pages; there is no image optimization server.
+      "@next/next/no-img-element": "off",
+    },
     languageOptions: {
       globals: {
         ...globals.browser,
