@@ -21,7 +21,7 @@ export const people: Person[] = [
   { id: "dojun-hwang", name: "Dojun Hwang", group: "student", status: "current", order: 3, role: "Graduate Student", degree: "B.S.–M.S.", email: "dojun2006@korea.ac.kr", website: "https://repo2x.com", image: "/media/people/dojun.jpg" },
   { id: "yoonseo-kim", name: "Yoonseo Kim", group: "student", status: "current", order: 4, role: "Graduate Student", degree: "B.S.–M.S.", email: "seo3167@korea.ac.kr", website: "https://hiyseo.com", image: "/media/people/yoonseo.jpg" },
   { id: "youngjune-lee", name: "Youngjune Lee", group: "student", status: "current", order: 5, role: "Graduate Student", degree: "Ph.D.", email: "yjlee511@gmail.com", website: "https://dudwns511.github.io/", image: "/media/people/youngjune.jpg" },
-  { id: "jeyun-lee", name: "Jeyun Lee", group: "undergraduate-intern", status: "current", order: 1, role: "Undergraduate Research Intern", image: "/media/people/jeyun.jpg" },
+  { id: "jeyun-lee", name: "Jeyun Lee", group: "undergraduate-intern", status: "current", order: 1, role: "Undergraduate Research Intern", image: "/media/people/jeyun-lee.jpg" },
   { id: "jeongwoo-choi", name: "Jeongwoo Choi", group: "undergraduate-intern", status: "current", order: 2, role: "Undergraduate Research Intern", image: "/media/people/jeongwoo.jpg" },
   { id: "donghyeok-kang", name: "Donghyeok Kang", group: "undergraduate-intern", status: "current", order: 3, role: "Undergraduate Research Intern", image: "/media/people/donghyeok.png" },
   { id: "seongeun-lee", name: "Seongeun Lee", group: "undergraduate-intern", status: "current", order: 4, role: "Undergraduate Research Intern", image: "/media/people/seongeun.jpg" },
