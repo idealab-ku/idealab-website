@@ -325,11 +325,13 @@ test("keeps the Join us page faithful to the public admission notice and FAQ", a
   const html = await response.text();
   assert.match(html, /현재 2027학년도 전기 대학원생 모집 및 SW·AI융합대학원 논문 지도 요청은 모두 마감되었습니다\./);
   assert.doesNotMatch(html, /id="admission-status-heading">모집 안내/);
-  assert.match(html, /Please send \(1\) a self-introduction, \(2\) CV, and \(3\) your academic transcript/);
+  assert.match(html, /Please send \(1\) a self-introduction, \(2\) CV, and \(3\) your academic transcript to[^]*?mailto:seongkukang@korea\.ac\.kr/);
   assert.match(html, /Do I need to have any qualifications to join your research group\?/);
   assert.match(html, /Sufficient English proficiency to read and understand research papers/);
   assert.match(html, /Undergraduate internships are offered twice a year/);
-  assert.match(html, /class="application-email"/);
-  assert.doesNotMatch(html, /class="apply-mail"|class="apply shell"/);
+  assert.match(html, /class="application-instructions"/);
+  assert.equal((html.match(/class="faq-item"/g) ?? []).length, 4);
+  assert.doesNotMatch(html, /<section class="faq"[^]*?<details/);
+  assert.doesNotMatch(html, /class="application-email"|class="apply-mail"|class="apply shell"/);
   assert.doesNotMatch(html, /Do meaningful work with people who care|Start with a thoughtful introduction/);
 });
