@@ -37,7 +37,7 @@ export default function Join() {
           <div className="faq-answer">
             {item.content.map((block, blockIndex) => block.type === "paragraph"
               ? <p key={blockIndex}>{block.text}</p>
-              : <ol key={blockIndex}>{block.items.map((entry) => <li key={entry}>{entry}</li>)}</ol>)}
+              : <ul className="faq-requirements" key={blockIndex}>{block.items.map((entry) => <li key={entry}>{entry}</li>)}</ul>)}
             {item.link && <a
               href={item.link.href.startsWith("/") ? sitePath(item.link.href) : item.link.href}
               target={item.link.href.startsWith("/") ? undefined : "_blank"}

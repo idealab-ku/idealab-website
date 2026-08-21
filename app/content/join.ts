@@ -15,7 +15,7 @@ export const faqItems: FaqItem[] = [
   {
     id: "research-focus",
     question: "What is your research group focused on?",
-    content: [{ type: "paragraph", text: "Our research group is currently exploring various topics in recommender systems, search systems, and data/web mining. For detailed descriptions of each research area and our latest studies, please refer to the research page." }],
+    content: [{ type: "paragraph", text: "Our research group is currently exploring various topics in recommender systems, search systems, and data/web mining, with a particular emphasis on large language models (LLMs) as reasoning agents. For detailed descriptions of each research area and our latest studies, please refer to the research page." }],
     link: { label: "View research areas", href: "/research" },
   },
   {
