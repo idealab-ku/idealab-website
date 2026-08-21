@@ -246,6 +246,7 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .admission-status{margin-top:-12px;margin-bottom:34px;padding:0}
 .admission-status p{margin:0;color:#465468;font-size:17px;line-height:1.6;font-weight:500}
 .admission-status p span{margin-right:3px;color:#758195}
+.admission-status p+p{margin-top:3px}
 .application-section{display:grid;grid-template-columns:180px 1fr;gap:35px;padding:38px 0 44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .application-section>h2{font-size:27px;line-height:1.3;margin:0}
 .application-content h3{font-size:22px;line-height:1.4;margin:0 0 20px}

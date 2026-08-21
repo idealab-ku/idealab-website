@@ -12,7 +12,9 @@ export default function Join() {
     />
 
     <aside className="admission-status shell" aria-label="현재 모집 현황">
-      <p><span aria-hidden="true">※</span> {application.statusNotice}</p>
+      {application.statusNotices.map((notice) => <p key={notice}>
+        <span aria-hidden="true">※</span> {notice}
+      </p>)}
     </aside>
 
     <section className="application-section shell">

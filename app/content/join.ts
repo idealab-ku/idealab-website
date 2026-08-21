@@ -5,7 +5,10 @@ export const application = {
   email: siteInfo.contactEmail,
   recruiting: "We are currently recruiting graduate students and undergraduate research interns.",
   instructions: "Please send (1) a self-introduction, (2) CV, and (3) your academic transcript to",
-  statusNotice: "현재 2027학년도 전기 대학원생 모집 및 SW·AI융합대학원 논문 지도 요청은 모두 마감되었습니다.",
+  statusNotices: [
+    "2027학년도 전기 대학원생 모집은 마감되었습니다.",
+    "최대 지도 가능 인원에 도달하여, SW·AI융합대학원 논문 지도 요청은 더 이상 받고 있지 않습니다.",
+  ],
 };
 
 export const faqItems: FaqItem[] = [
