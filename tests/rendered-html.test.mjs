@@ -126,7 +126,7 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.match(piHtml, /Neural Computing and Applications/);
   assert.match(piHtml, /겸임 교수, 인공지능학과, 고려대학교/);
   assert.match(piHtml, /인공지능 \(2025S, 2026S\)/);
-  assert.match(piHtml, /AI최고급 신진 연구자 지원 사업 \(IITP\)/);
+  assert.doesNotMatch(piHtml, /AI최고급 신진 연구자 지원 사업|Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술/);
   assert.doesNotMatch(piHtml, /기계학습 기반 의사결정 지원/);
   assert.match(piHtml, /class="profile-entry-full"[^>]*><p>비공개 저자원 환경/);
   assert.match(piHtml, /class="profile-entry-full"[^>]*><a[^>]*>인공지능/);
@@ -184,13 +184,13 @@ test("presents research areas, major projects, and verified collaborators", asyn
   for (const topic of ["recommendation", "search-retrieval", "knowledge-mining"]) {
     assert.match(html, new RegExp(`${escapedPath("/publications")}\\?topics=${topic}#publication-filter`));
   }
-  assert.equal((html.match(/class="research-project-item"/g) ?? []).length, 6);
+  assert.equal((html.match(/class="research-project-item"/g) ?? []).length, 4);
   assert.equal((html.match(/class="collaborator-logo"/g) ?? []).length, 10);
   assert.match(html, /We are always open to a wide range of collaborations/);
   assert.doesNotMatch(html, /Industry &amp; public R&amp;D|Discuss collaboration/);
   assert.match(html, /Microsoft Research Asia/);
-  assert.match(html, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술/);
-  assert.match(html, /AI최고급 신진 연구자 지원 사업/);
+  assert.doesNotMatch(html, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술/);
+  assert.doesNotMatch(html, /AI최고급 신진 연구자 지원 사업/);
   assert.match(html, /Samsung Electronics/);
   assert.match(html, /Mohamed bin Zayed University of Artificial Intelligence/);
   assert.match(html, /Academic and Industry Collaborators/);

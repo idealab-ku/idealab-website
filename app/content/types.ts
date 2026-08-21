@@ -79,6 +79,7 @@ export interface MajorResearchProject {
   id: string;
   title: string;
   partner: string;
+  isPublic?: boolean;
 }
 
 export interface ResearchCollaborator {
