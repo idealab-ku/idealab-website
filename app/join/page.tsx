@@ -20,11 +20,10 @@ export default function Join() {
     <section className="application-section shell">
       <h2>Application</h2>
       <div className="application-content">
-        <h3>Graduate students &amp; undergraduate research interns</h3>
         <p>{application.recruiting}</p>
         <p className="application-instructions">
           {application.instructions}{" "}
-          <a href={`mailto:${application.email}`}>{application.email}</a>.
+          <span>{application.email}</span>.
         </p>
       </div>
     </section>
