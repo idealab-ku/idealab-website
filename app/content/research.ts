@@ -34,10 +34,10 @@ export const researchAreas: ResearchArea[] = [
 const allMajorResearchProjects: MajorResearchProject[] = [
   { id: "iitp-ai-top-tier-emerging-researcher", title: "AI최고급 신진 연구자 지원 사업", partner: "IITP", isPublic: false },
   { id: "scientific-ai-hierarchical-knowledge-graph-rag", title: "Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술", partner: "Samsung Electronics", isPublic: false },
-  { id: "private-resource-retrieval", title: "비공개 저자원 환경을 위한 개념 체계 구조화 기반 검색 및 지속 업데이트 기술", partner: "NRF" },
-  { id: "multimodal-knowledge-retrieval", title: "멀티모달 지식 구조화 기반 검색 고도화 기술", partner: "KT" },
-  { id: "real-world-recommendation-feature-selection", title: "실세계 추천 시스템을 위한 feature selection 기술", partner: "NAVER" },
-  { id: "large-scale-recommendation-efficiency", title: "거대 추천 시스템 경량화 및 편향 (bias) 제거 기술", partner: "Microsoft Research Asia" },
+  { id: "private-resource-retrieval", title: "비공개 저자원 환경을 위한 개념 체계 구조화 기반 검색 및 지속 업데이트 기술", partner: "NRF", period: "2026–2029" },
+  { id: "multimodal-knowledge-retrieval", title: "멀티모달 지식 구조화 기반 검색 고도화 기술", partner: "KT", period: "2025–2026" },
+  { id: "real-world-recommendation-feature-selection", title: "실세계 추천 시스템을 위한 feature selection 기술", partner: "NAVER", period: "2023–2024" },
+  { id: "large-scale-recommendation-efficiency", title: "거대 추천 시스템 경량화 및 편향 (bias) 제거 기술", partner: "Microsoft Research Asia", period: "2023–2024" },
 ];
 
 export const majorResearchProjects = allMajorResearchProjects.filter(
