@@ -32,8 +32,8 @@ export default function Research() {
           {majorResearchProjects.map((project) => <li className="research-project-item" key={project.id}>
             <h3>{project.title}</h3>
             <p className="research-project-meta">
-              {project.period && <span>{project.period}</span>}
               <span>{project.partner}</span>
+              {project.period && <span>{project.period}</span>}
             </p>
           </li>)}
         </ul>
