@@ -323,8 +323,9 @@ test("restores complete tutorial content and preserves public route aliases", as
 test("keeps the Join us page faithful to the public admission notice and FAQ", async () => {
   const response = await render("/join");
   const html = await response.text();
-  assert.match(html, /27년도 전기 입학 모집 마감되었습니다/);
-  assert.match(html, /SW·AI융합대학원 논문 지도 요청 마감되었습니다/);
+  assert.match(html, /2027학년도 전기 대학원생 모집은 마감되었습니다\./);
+  assert.match(html, /SW·AI융합대학원 논문 지도 요청은 마감되었습니다\./);
+  assert.match(html, /id="admission-status-heading">모집 안내/);
   assert.match(html, /Please send \(1\) a self-introduction, \(2\) CV, and \(3\) your academic transcript/);
   assert.match(html, /Do I need to have any qualifications to join your research group\?/);
   assert.match(html, /Sufficient English proficiency to read and understand research papers/);

@@ -6,8 +6,8 @@ export const application = {
   recruiting: "We are currently recruiting graduate students and undergraduate research interns.",
   instructions: "Please send (1) a self-introduction, (2) CV, and (3) your academic transcript to:",
   statusNotices: [
-    "27년도 전기 입학 모집 마감되었습니다",
-    "SW·AI융합대학원 논문 지도 요청 마감되었습니다",
+    "2027학년도 전기 대학원생 모집은 마감되었습니다.",
+    "SW·AI융합대학원 논문 지도 요청은 마감되었습니다.",
   ],
 };
 
