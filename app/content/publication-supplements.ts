@@ -12,8 +12,25 @@ export const patents = [
   ["분자의 토포로지 정보를 이용한 딥러닝 기술기반 분자 군집화 장치 및 방법", "KR10-2023-0076575 · 2023", "유환조, 김수연, 이동하, 강성구, 이성현"],
 ];
 
-export const domesticPublications = [
-  ["SLM-LLM 기반 스키마 매칭 및 설명가능 인공지능을 활용한 데이터 자산 가격 예측 및 가치평가 연구", "KCC 2026 (한국정보과학회 컴퓨터종합학술대회)", "권순률, 강성구"],
-  ["유튜브 트레일러 댓글 임베딩과 Multi-View Feature Selection을 활용한 북미 개봉 첫 주말 박스오피스 예측", "KCC 2026 (한국정보과학회 컴퓨터종합학술대회)", "서정범, 강성구"],
-  ["운전자의 충전 행태 및 상권 맥락 정보를 결합한 전기차 충전소 추천 모델 연구", "KCC 2026 (한국정보과학회 컴퓨터종합학술대회)", "이람, 강성구"],
+export interface DomesticPublication {
+  year: number;
+  title: string;
+  venue: string;
+  authors: string;
+  link?: string;
+  recognition?: string;
+}
+
+export const domesticPublications: DomesticPublication[] = [
+  { year: 2026, title: "SLM-LLM 기반 스키마 매칭 및 설명가능 인공지능을 활용한 데이터 자산 가격 예측 및 가치평가 연구", venue: "KCC 2026 (한국정보과학회 컴퓨터종합학술대회)", authors: "권순률, 강성구" },
+  { year: 2026, title: "유튜브 트레일러 댓글 임베딩과 Multi-View Feature Selection을 활용한 북미 개봉 첫 주말 박스오피스 예측", venue: "KCC 2026 (한국정보과학회 컴퓨터종합학술대회)", authors: "서정범, 강성구" },
+  { year: 2026, title: "운전자의 충전 행태 및 상권 맥락 정보를 결합한 전기차 충전소 추천 모델 연구", venue: "KCC 2026 (한국정보과학회 컴퓨터종합학술대회)", authors: "이람, 강성구" },
+  {
+    year: 2017,
+    title: "효과적인 협업 필터링을 위한 신뢰 네트워크 밀도 강화 방안",
+    venue: "KDBC 2017 (한국정보과학회 데이터베이스 소사이어티)",
+    authors: "강성구, 왕재민, 이연창, 김상욱",
+    link: "https://scholarworks.bwise.kr/hanyang/handle/2021.sw.hanyang/151151",
+    recognition: "Best Paper Award",
+  },
 ];

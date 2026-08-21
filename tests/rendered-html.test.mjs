@@ -140,11 +140,10 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
 
   const publicationsResponse = await render("/publications");
   const publicationsHtml = await publicationsResponse.text();
-  assert.equal((publicationsHtml.match(/class="paper-row"/g) ?? []).length, 60);
+  assert.equal((publicationsHtml.match(/class="paper-row"/g) ?? []).length, 59);
   assert.match(publicationsHtml, new RegExp(escapedPath("/media/publications/2026/2026-cikm-environment-conditioned.jpg")));
-  assert.match(publicationsHtml, new RegExp(escapedPath("/media/publications/2020-and-before/2017-kdbc-trust-network.png")));
   assert.match(publicationsHtml, /2020 and before/);
-  assert.match(publicationsHtml, /Densifying a Trust Network for Effective Collaborative Filtering/);
+  assert.doesNotMatch(publicationsHtml, /Densifying a Trust Network for Effective Collaborative Filtering|2017-kdbc-trust-network/);
   assert.match(publicationsHtml, /<sup class="author-mark-corresponding">†<\/sup>/);
   assert.doesNotMatch(publicationsHtml, /Paper \/ page/);
   assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2106\.08700/);
@@ -159,6 +158,14 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.match(publicationsHtml, /Bias &amp; Robustness/);
   assert.match(publicationsHtml, /Multiple selections match all selected topics/);
   assert.match(publicationsHtml, /aria-pressed="true"[^>]*>All/);
+
+  const domesticResponse = await render("/publication/domestic-conference");
+  const domesticHtml = await domesticResponse.text();
+  assert.equal((domesticHtml.match(/<article/g) ?? []).length, 4);
+  assert.match(domesticHtml, /효과적인 협업 필터링을 위한 신뢰 네트워크 밀도 강화 방안/);
+  assert.match(domesticHtml, /강성구, 왕재민, 이연창, 김상욱/);
+  assert.match(domesticHtml, /KDBC 2017[^]*?Best Paper Award/);
+  assert.match(domesticHtml, /https:\/\/scholarworks\.bwise\.kr\/hanyang\/handle\/2021\.sw\.hanyang\/151151/);
 });
 
 test("restores the complete news archive and related links", async () => {

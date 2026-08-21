@@ -1,4 +1,37 @@
+import { Fragment } from "react";
 import { PageHero, SiteFrame } from "../../components";
 import { domesticPublications } from "../../content/publication-supplements";
 
-export default function DomesticConference(){return <SiteFrame><PageHero index="" eyebrow="Domestic Conference" title="Domestic Conference" intro="Publications presented at domestic conferences."/><section className="simple-records shell"><div className="publication-year"><h2>2026</h2><span>{domesticPublications.length} publications</span></div>{domesticPublications.map(([title,venue,authors])=><article key={title}><span>{venue}</span><h2>{title}</h2><p>{authors}</p></article>)}</section></SiteFrame>}
+const domesticYears = [...new Set(domesticPublications.map((publication) => publication.year))]
+  .sort((a, b) => b - a);
+
+export default function DomesticConference() {
+  return <SiteFrame>
+    <PageHero
+      index=""
+      eyebrow="Domestic Conference"
+      title="Domestic Conference"
+      intro="Publications presented at domestic conferences."
+    />
+    <section className="simple-records shell">
+      {domesticYears.map((year) => {
+        const publicationsForYear = domesticPublications.filter((publication) => publication.year === year);
+        return <Fragment key={year}>
+          <div className="publication-year">
+            <h2>{year}</h2>
+            <span>{publicationsForYear.length} {publicationsForYear.length === 1 ? "publication" : "publications"}</span>
+          </div>
+          {publicationsForYear.map((publication) => <article key={publication.title}>
+            <span>{publication.venue}</span>
+            <h2>{publication.link
+              ? <a href={publication.link} target="_blank" rel="noreferrer">{publication.title} <span aria-hidden="true">↗</span></a>
+              : publication.title}
+            </h2>
+            <p>{publication.authors}</p>
+            {publication.recognition && <small className="record-recognition">{publication.recognition}</small>}
+          </article>)}
+        </Fragment>;
+      })}
+    </section>
+  </SiteFrame>;
+}

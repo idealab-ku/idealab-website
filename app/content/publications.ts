@@ -101,7 +101,6 @@ const publicationRecords: Omit<Publication, "topics">[] = [
   { id:"2020-www-deep-rating", year:2020, order:2, venue:"ACM International World-Wide Web Conference (WWW), Short Paper", title:"Deep Rating Elicitation for New Users in Collaborative Filtering", authors:"Wonbin Kweon, SeongKu Kang, Junyoung Hwang, Hwanjo Yu", summary:"We introduce DRE, a framework for choosing initial seed items for new users.", thumbnail:image("2020-and-before", "2020-www-deep-rating"), link:"https://dl.acm.org/doi/abs/10.1145/3366423.3380042" },
   { id:"2020-imcom-fake-news", year:2020, order:3, venue:"IEEE International Conference on Ubiquitous Information Management and Communication (IMCOM)", title:"Multi-Modal Component Embedding for Fake News Detection", authors:"SeongKu Kang, Junyoung Hwang, Hwanjo Yu", summary:"We explore multi-modal feature combinations for fake-news detection.", thumbnail:image("2020-and-before", "2020-imcom-fake-news"), link:"https://ieeexplore.ieee.org/document/9001800" },
   { id:"2019-cikm-cross-domain", year:2019, order:4, venue:V.CIKM, title:"Semi-Supervised Learning for Cross-Domain Recommendation to Cold-start Users", authors:"SeongKu Kang, Junyoung Hwang, Dongha Lee, Hwanjo Yu", summary:"We introduce semi-supervised mapping for settings with extremely limited overlapping users.", thumbnail:image("2020-and-before", "2019-cikm-cross-domain"), link:"https://dl.acm.org/doi/10.1145/3357384.3357914", recognition:{label:"Ranked 12th among the most influential papers at CIKM 2019", href:"https://resources.paperdigest.org/2025/09/most-influential-cikm-papers-2025-09-version/"} },
-  { id:"2017-kdbc-trust-network", year:2017, order:5, venue:"Korean DataBase Conference (KDBC)", title:"Densifying a Trust Network for Effective Collaborative Filtering", authors:"SeongKu Kang, Jemin Wang, Yeon-Chang Lee, Sang-Wook Kim", summary:"We densify social networks to provide supplementary signals for recommendation.", thumbnail:image("2020-and-before", "2017-kdbc-trust-network"), link:"https://scholarworks.bwise.kr/hanyang/handle/2021.sw.hanyang/151151", recognition:{label:"Best Paper Award"} },
 ];
 
 const t = (...topics: PublicationTopic[]) => topics;
@@ -166,7 +165,6 @@ const publicationTopicsById: Record<string, PublicationTopic[]> = {
   "2020-www-deep-rating": t("recommendation"),
   "2020-imcom-fake-news": t("knowledge-mining"),
   "2019-cikm-cross-domain": t("recommendation"),
-  "2017-kdbc-trust-network": t("recommendation", "knowledge-mining"),
 };
 
 export const publications: Publication[] = publicationRecords.map((publication) => {
