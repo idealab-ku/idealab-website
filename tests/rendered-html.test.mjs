@@ -29,6 +29,7 @@ test("server-renders the IDEA Lab home page", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>IDEA Lab — Korea University<\/title>/i);
+  assert.match(html, /<header class="site-header"><div class="site-header-inner shell">/);
   assert.match(html, /Intelligent Data Science/);
   assert.match(html, /Recent News/);
   assert.match(html, /Research Areas/);

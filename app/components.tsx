@@ -3,7 +3,7 @@ import { primaryNavigation, siteInfo } from "./content/site";
 import { sitePath } from "./site-path";
 
 export function Header() {
-  return <header className="site-header shell"><Link className="brand" href="/"><img src={sitePath("/media/brand/idea-logo-horizontal-tight.png")} alt={siteInfo.shortName} /></Link><nav aria-label="Primary navigation">{primaryNavigation.map(({ label, href }) => <Link href={href} key={href}>{label}</Link>)}</nav><details className="mobile-menu"><summary>Menu</summary><div>{primaryNavigation.map(({ label, href }) => <Link href={href} key={href}>{label}</Link>)}</div></details></header>;
+  return <header className="site-header"><div className="site-header-inner shell"><Link className="brand" href="/"><img src={sitePath("/media/brand/idea-logo-horizontal-tight.png")} alt={siteInfo.shortName} /></Link><nav aria-label="Primary navigation">{primaryNavigation.map(({ label, href }) => <Link href={href} key={href}>{label}</Link>)}</nav><details className="mobile-menu"><summary>Menu</summary><div>{primaryNavigation.map(({ label, href }) => <Link href={href} key={href}>{label}</Link>)}</div></details></div></header>;
 }
 
 export function Footer() {

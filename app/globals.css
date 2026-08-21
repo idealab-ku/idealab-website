@@ -10,7 +10,8 @@ img{display:block;max-width:100%}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-.site-header{height:74px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;background:#fff}
+.site-header{height:74px;position:sticky;top:0;z-index:50;background:#fff}
+.site-header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
 .brand img{width:240px;height:52px;object-fit:contain;object-position:left center}
 nav{display:flex;align-items:center;gap:30px;font-size:17px;font-weight:600}
 nav a{padding:9px 0 6px;border-bottom:2px solid transparent}
