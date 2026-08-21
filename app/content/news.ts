@@ -4,7 +4,7 @@ import { publications } from "./publications";
 
 const publicationsById = new Map(publications.map((publication) => [publication.id, publication]));
 
-const paper = (id: string, year: number, order: number, category: string, title: string): NewsItem => {
+const paper = (id: string, year: number, order: number, venue: string, title: string): NewsItem => {
   const publication = publicationsById.get(id);
 
   if (!publication) {
@@ -15,8 +15,9 @@ const paper = (id: string, year: number, order: number, category: string, title:
     id,
     year,
     order,
-    category,
-    title: `Accepted paper: “${title}”, ${category}, ${year}`,
+    category: "Accepted Paper",
+    venue,
+    title,
     image: publication.thumbnail,
     href: `/publications#${id}`,
   };

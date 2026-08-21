@@ -28,6 +28,7 @@ export interface ConvergenceStudent {
 export interface NewsItem {
   id: string;
   category: string;
+  venue?: string;
   year: number;
   title: string;
   image?: string;
