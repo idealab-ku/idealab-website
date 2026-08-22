@@ -15,7 +15,11 @@ export const faqItems: FaqItem[] = [
   {
     id: "research-focus",
     question: "What is your research group focused on?",
-    content: [{ type: "paragraph", text: "Our research group is currently exploring various topics in recommender systems, search systems, and data/web mining, with a particular emphasis on large language models (LLMs) as reasoning agents. For detailed descriptions of each research area and our latest studies, please refer to the research page." }],
+    content: [
+      { type: "paragraph", text: "Our research group is currently exploring various topics in recommender systems, search systems, and data/web mining, with a particular emphasis on large language models (LLMs) as reasoning agents." },
+      { type: "paragraph", text: "We target top venues in related fields, including Data Science (KDD, WWW, SIGIR, CIKM, WSDM), Natural Language Processing (ACL, EMNLP, NAACL, COLM), Artificial Intelligence / Machine Learning (NeurIPS, ICML, AAAI, ICLR), and relevant high-ranking journals." },
+      { type: "paragraph", text: "For detailed descriptions of each research area and our latest studies, please refer to the research page." },
+    ],
     link: { label: "View research areas", href: "/research" },
   },
   {
