@@ -293,7 +293,7 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .detail-page ul,.detail-page ol{padding-left:21px}
 .course-detail{padding:0 0 80px;max-width:none}
 .course-detail h2{font-size:24px;line-height:1.35;letter-spacing:-.02em;margin:0 0 18px}
-.course-detail p,.course-detail li{font-size:16px;line-height:1.75;color:var(--muted)}
+.course-detail p,.course-detail li{font-size:17px;line-height:1.75;color:var(--muted)}
 .course-detail ul{margin:0;padding-left:24px;list-style:disc outside}
 .course-detail li{display:list-item;padding-left:3px}
 .course-detail li::marker{color:var(--teal-dark);font-size:.9em}
@@ -306,19 +306,19 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .course-information-grid h2{font-size:19px;margin-bottom:13px}
 .course-information-grid p{margin:0 0 14px}
 .course-information-grid li+li{margin-top:7px}
-.course-note{margin:16px 0 0!important;padding-top:14px;border-top:1px solid var(--line);font-size:15px!important}
+.course-note{margin:16px 0 0!important;padding-top:14px;border-top:1px solid var(--line);font-size:16px!important}
 .course-embed{padding:40px 0;border-top:1px solid var(--line)}
 .course-section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:18px}
 .course-section-heading h2{margin:0}
-.course-section-heading a{flex:0 0 auto;color:var(--teal-dark);font-size:16px;font-weight:650}
+.course-section-heading a{flex:0 0 auto;color:var(--teal-dark);font-size:17px;font-weight:650}
 .course-embed iframe{display:block;width:100%;height:620px;border:1px solid var(--line);border-radius:12px;background:#fff}
 .course-offerings{padding:40px 0;border-top:1px solid var(--line)}
 .course-offerings>div{border-top:1px solid var(--line)}
 .course-offerings article{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:19px 0;border-bottom:1px solid var(--line)}
-.course-offerings strong{font-size:16px;color:var(--teal-dark)}
+.course-offerings strong{font-size:17px;color:var(--teal-dark)}
 .course-offerings p{margin:0}
 .course-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.course-links a{display:inline-flex;padding:7px 10px;border:1px solid var(--line);border-radius:18px;color:var(--teal-dark);font-size:15px;line-height:1.2}
+.course-links a{display:inline-flex;padding:7px 10px;border:1px solid var(--line);border-radius:18px;color:var(--teal-dark);font-size:16px;line-height:1.2}
 .course-links a:hover{border-color:var(--teal)}
 .teaching-review{padding:0 0 76px;max-width:920px}
 .teaching-review-heading>span{color:var(--muted);font-size:16px;font-weight:650}
@@ -351,6 +351,9 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .schedule-zoom{width:max-content;margin-bottom:22px}
 .schedule-page>iframe{display:block;width:100%;height:680px;border:1px solid var(--line);border-radius:14px;background:#fff}
 
+@media(min-width:1200px){
+  .course-embed iframe{position:relative;left:50%;width:min(1440px,calc(100vw - 48px));height:720px;transform:translateX(-50%)}
+}
 @media(max-width:800px){
   .shell{width:min(100% - 32px,1088px)}
   nav{display:none}.mobile-menu{display:block;position:relative}
