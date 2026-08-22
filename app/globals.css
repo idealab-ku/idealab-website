@@ -295,12 +295,14 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .detail-page h3{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-dark);margin:30px 0 13px}
 .detail-page p,.detail-page li{font-size:16px;line-height:1.75;color:var(--muted)}
 .detail-page ul,.detail-page ol{padding-left:21px}
-.course-detail{padding:0 0 80px;max-width:920px}
+.course-detail{padding:0 0 80px;max-width:none}
 .course-detail h2{font-size:24px;line-height:1.35;letter-spacing:-.02em;margin:0 0 18px}
 .course-detail p,.course-detail li{font-size:16px;line-height:1.75;color:var(--muted)}
-.course-detail ul{margin:0;padding-left:20px}
+.course-detail ul{margin:0;padding-left:24px;list-style:disc outside}
+.course-detail li{display:list-item;padding-left:3px}
+.course-detail li::marker{color:var(--teal-dark);font-size:.9em}
 .course-overview{padding:34px 0 42px;border-bottom:1px solid var(--line)}
-.course-overview p{max-width:800px;margin:0 0 13px}
+.course-overview p{max-width:none;margin:0 0 13px}
 .course-availability{margin-top:24px!important;padding:15px 18px;background:var(--soft);border-radius:10px;color:var(--teal-dark)!important}
 .course-information-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:40px 0}
 .course-information-grid section{padding:26px 28px;border:1px solid var(--line);border-radius:12px;background:#fff}
