@@ -27,12 +27,8 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .home-hero{min-height:560px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-top:96px;padding-bottom:96px}
 .home-copy h1{font-size:34px;line-height:1.22;letter-spacing:-.035em;margin:0 0 20px;font-weight:700}
 .home-copy>p{max-width:512px;color:var(--muted);font-size:16px;line-height:1.65;margin:0}
-.hero-buttons{display:flex;gap:12px;margin-top:26px}
-.primary-btn,.secondary-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:12px;padding:11px 21px;font-size:16px;font-weight:600;min-height:46px}
-.primary-btn{background:var(--teal);color:#fff}
+.primary-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:12px;padding:11px 21px;background:var(--teal);color:#fff;font-size:16px;font-weight:600;min-height:46px}
 .primary-btn:hover{background:var(--teal-dark)}
-.secondary-btn{border:1px solid #cdd7d9;background:#fff}
-.secondary-btn:hover{border-color:var(--teal);color:var(--teal-dark)}
 .home-photo{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center center;border-radius:16px}
 
 .home-section{padding:92px 0}

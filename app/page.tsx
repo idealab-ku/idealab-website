@@ -8,8 +8,7 @@ export default function Home() {
     <section className="home-hero shell">
       <div className="home-copy">
         <h1>Intelligent Data Science &amp;<br />Applications Lab, Korea University</h1>
-        <p>We develop intelligent systems that help people navigate overwhelming information—delivering relevant, high-quality, and actionable insights for each user’s context and needs.</p>
-        <div className="hero-buttons"><a className="primary-btn" href={sitePath("/publications")}>Publications <span>→</span></a><a className="secondary-btn" href={sitePath("/join")}>Join Us</a></div>
+        <p>We develop intelligent systems that help people navigate overwhelming information. We deliver relevant, high-quality, and actionable insights for each user’s context and needs.</p>
       </div>
       <img className="home-photo" src={sitePath("/media/lab-life/home-hero-dasfaa-context.png")} alt="IDEA Lab members at DASFAA" />
     </section>
