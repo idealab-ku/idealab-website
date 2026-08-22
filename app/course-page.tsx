@@ -5,7 +5,7 @@ import { sitePath } from "./site-path";
 function LinkList({ links }: { links: NonNullable<CourseDetail["offerings"][number]["links"]> }) {
   return <span className="course-links">{links.map((link) => {
     const external = link.href.startsWith("http");
-    return <a href={sitePath(link.href)} key={link.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>{link.label}<span aria-hidden="true"> ↗</span></a>;
+    return <a href={sitePath(link.href)} key={link.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>{link.label}<span className="link-arrow" aria-hidden="true"> ↗︎</span></a>;
   })}</span>;
 }
 
@@ -26,7 +26,7 @@ export function CoursePage({ course }: { course: CourseDetail }) {
       </div>}
 
       {course.embeds?.map((embed) => <section className="course-embed" key={embed.src}>
-        <div className="course-section-heading"><h2>{embed.title}</h2><a href={embed.source} target="_blank" rel="noreferrer">Open in Google <span aria-hidden="true">↗</span></a></div>
+        <div className="course-section-heading"><h2>{embed.title}</h2><a href={embed.source} target="_blank" rel="noreferrer">Open in Google <span className="link-arrow" aria-hidden="true">↗︎</span></a></div>
         <iframe src={embed.src} title={`${course.code} ${embed.title}`} loading="lazy" allowFullScreen />
       </section>)}
 

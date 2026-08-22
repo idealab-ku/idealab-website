@@ -102,7 +102,7 @@ test("keeps required people and publication records visible", async () => {
   assert.match(peopleHtml, /aria-label="Yoonseo Kim website"[^>]*>↗/);
   assert.match(peopleHtml, /aria-label="Youngjune Lee website"[^>]*>↗/);
   assert.doesNotMatch(peopleHtml, />Website ↗</);
-  assert.match(peopleHtml, /Google Scholar ↗/);
+  assert.match(peopleHtml, /Google Scholar <span class="link-arrow" aria-hidden="true">↗︎<\/span>/);
 for (const name of ["권순률", "서정범", "민채정", "이람", "김병준", "조강훈", "김동혁"]) {
   assert.match(peopleHtml, new RegExp(name), name);
 }
@@ -135,8 +135,8 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
 
   const scheduleResponse = await render("/people/schedule");
   const scheduleHtml = await scheduleResponse.text();
-  assert.match(scheduleHtml, /Zoom meeting ↗/);
-  assert.ok(scheduleHtml.indexOf("Zoom meeting ↗") < scheduleHtml.indexOf("<iframe"));
+  assert.match(scheduleHtml, /Zoom meeting <span class="link-arrow" aria-hidden="true">↗︎<\/span>/);
+  assert.ok(scheduleHtml.indexOf("Zoom meeting ") < scheduleHtml.indexOf("<iframe"));
   assert.doesNotMatch(scheduleHtml, /Conference deadlines|Business trip|Weekday evenings/);
 
   const publicationsResponse = await render("/publications");

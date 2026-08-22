@@ -88,7 +88,7 @@ export function PublicationBrowser() {
             <div className="paper-image"><img src={sitePath(paper.thumbnail)} alt={`Figure for ${paper.title}`} loading="lazy" /></div>
             <div className="paper-copy">
               <h3>{paper.link || paper.page
-                ? <a href={sitePath((paper.link ?? paper.page)!)} {...externalProps((paper.link ?? paper.page)!)}>{paper.title} <span className="paper-title-arrow" aria-hidden="true">↗</span></a>
+                ? <a href={sitePath((paper.link ?? paper.page)!)} {...externalProps((paper.link ?? paper.page)!)}>{paper.title} <span className="paper-title-arrow" aria-hidden="true">↗︎</span></a>
                 : paper.title}</h3>
               <p className="paper-authors">{markedAuthors(paper.authors)}</p>
               <p className="paper-venue-full">{paper.venue}</p>
@@ -99,7 +99,7 @@ export function PublicationBrowser() {
                   : paper.recognition.label}
               </p>}
               {paper.link && paper.page && <div className="paper-actions">
-                <a className="paper-link" href={sitePath(paper.page)} {...externalProps(paper.page)}>Page <span aria-hidden="true">↗</span></a>
+                <a className="paper-link" href={sitePath(paper.page)} {...externalProps(paper.page)}>Page <span className="link-arrow" aria-hidden="true">↗︎</span></a>
               </div>}
             </div>
           </article>)}

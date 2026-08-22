@@ -41,7 +41,7 @@ export default function Join() {
               href={item.link.href.startsWith("/") ? sitePath(item.link.href) : item.link.href}
               target={item.link.href.startsWith("/") ? undefined : "_blank"}
               rel={item.link.href.startsWith("/") ? undefined : "noreferrer"}
-            >{item.link.label} <span aria-hidden="true">↗</span></a>}
+            >{item.link.label} <span className="link-arrow" aria-hidden="true">↗︎</span></a>}
           </div>
         </article>)}
       </div>

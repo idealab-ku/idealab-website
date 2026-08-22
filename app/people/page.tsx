@@ -16,8 +16,8 @@ export default function People() {
           <div className="pi-links">
             <a href={sitePath("/people/pi")}>Full profile →</a>
             <a href={sitePath("/people/schedule")}>Schedule →</a>
-            {principalInvestigator.email && <a href={`mailto:${principalInvestigator.email}`}>Email ↗</a>}
-            <a href="https://scholar.google.com/citations?user=fB0K-fMAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+            {principalInvestigator.email && <a href={`mailto:${principalInvestigator.email}`}>Email <span className="link-arrow" aria-hidden="true">↗︎</span></a>}
+            <a href="https://scholar.google.com/citations?user=fB0K-fMAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar <span className="link-arrow" aria-hidden="true">↗︎</span></a>
           </div>
         </div>
       </article>
@@ -27,7 +27,7 @@ export default function People() {
       <div className="member-grid">{currentStudents.map((person) => <article className="member-card" key={person.id}>
         <img src={sitePath(person.image)} alt={person.name} />
         <div className="member-card-copy">
-          <h3 className="member-name">{person.name}{person.website && <a className="member-website-arrow" href={person.website} target="_blank" rel="noreferrer" aria-label={`${person.name} website`}>↗</a>}</h3>
+          <h3 className="member-name">{person.name}{person.website && <a className="member-website-arrow" href={person.website} target="_blank" rel="noreferrer" aria-label={`${person.name} website`}>↗︎</a>}</h3>
           <p className="role">{person.degree}</p>
           <div className="member-links">
             {person.email && <a href={`mailto:${person.email}`}>{person.email}</a>}
@@ -59,7 +59,7 @@ export default function People() {
       <div className="member-grid alumni-grid">{alumni.map((person) => <article className="member-card" key={person.id}>
         <img src={sitePath(person.image)} alt={person.name} />
         <div className="member-card-copy">
-          <h3 className="member-name">{person.name}{person.website && <a className="member-website-arrow" href={person.website} target="_blank" rel="noreferrer" aria-label={`${person.name} website`}>↗</a>}</h3>
+          <h3 className="member-name">{person.name}{person.website && <a className="member-website-arrow" href={person.website} target="_blank" rel="noreferrer" aria-label={`${person.name} website`}>↗︎</a>}</h3>
           <p className="role">{person.role}</p>
           {person.degree && <p>{person.degree}</p>}
         </div>

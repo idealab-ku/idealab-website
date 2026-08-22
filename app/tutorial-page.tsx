@@ -22,7 +22,7 @@ export function TutorialPage({ tutorial }: { tutorial: Tutorial }) {
         <div className="tutorial-outline">{tutorial.outline.map((part, index) => <article key={part.title}>
           <span>{String(index + 1).padStart(2, "0")}</span>
           <div><h3>{part.title}</h3><strong>{part.duration}</strong><ul>{part.topics.map((topic) => <li key={topic}>{topic}</li>)}</ul></div>
-          {part.slides && <a href={part.slides} target="_blank" rel="noreferrer">Slides <span aria-hidden="true">↗</span></a>}
+          {part.slides && <a href={part.slides} target="_blank" rel="noreferrer">Slides <span className="link-arrow" aria-hidden="true">↗︎</span></a>}
         </article>)}</div>
       </section>
 
@@ -30,7 +30,7 @@ export function TutorialPage({ tutorial }: { tutorial: Tutorial }) {
         <h2>Speakers</h2>
         <div className="tutorial-speakers">{tutorial.speakers.map((speaker) => <article key={speaker.name}>
           {speaker.image ? <img src={sitePath(speaker.image)} alt={speaker.name} /> : <div className="speaker-placeholder" aria-hidden="true">{speaker.name.split(" ").map((part) => part[0]).join("")}</div>}
-          <div><h3>{speaker.website ? <a href={speaker.website} target="_blank" rel="noreferrer">{speaker.name} <span aria-hidden="true">↗</span></a> : speaker.name}</h3>{speaker.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+          <div><h3>{speaker.website ? <a href={speaker.website} target="_blank" rel="noreferrer">{speaker.name} <span className="link-arrow" aria-hidden="true">↗︎</span></a> : speaker.name}</h3>{speaker.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
         </article>)}</div>
       </section>
 

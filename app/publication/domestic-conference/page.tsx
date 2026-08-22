@@ -24,7 +24,7 @@ export default function DomesticConference() {
           {publicationsForYear.map((publication) => <article key={publication.title}>
             <span>{publication.venue}</span>
             <h2>{publication.link
-              ? <a href={publication.link} target="_blank" rel="noreferrer">{publication.title} <span aria-hidden="true">↗</span></a>
+              ? <a href={publication.link} target="_blank" rel="noreferrer">{publication.title} <span className="link-arrow" aria-hidden="true">↗︎</span></a>
               : publication.title}
             </h2>
             <p>{publication.authors}</p>
