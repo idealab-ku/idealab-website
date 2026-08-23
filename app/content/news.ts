@@ -4,7 +4,7 @@ import { publications } from "./publications";
 
 const publicationsById = new Map(publications.map((publication) => [publication.id, publication]));
 
-const paper = (id: string, year: number, order: number, venue: string, title: string): NewsItem => {
+const paper = (id: string, year: number, order: number, venue: string, title: string, venueLabel?: string): NewsItem => {
   const publication = publicationsById.get(id);
 
   if (!publication) {
@@ -17,6 +17,7 @@ const paper = (id: string, year: number, order: number, venue: string, title: st
     order,
     category: "Accepted Paper",
     venue,
+    venueLabel,
     title,
     image: publication.thumbnail,
     href: `/publications#${id}`,
@@ -24,8 +25,8 @@ const paper = (id: string, year: number, order: number, venue: string, title: st
 };
 
 export const newsItems: NewsItem[] = [
-  paper("2026-emnlp-hobit", 2026, 1, "EMNLP Demo", "hoBIT: A Profile-Aware Retrieval-Augmented Chatbot for University Academic Advising"),
-  paper("2026-emnlp-pearl", 2026, 2, "EMNLP Main", "PEARL: Front-Loading Relational Chains for Multi-Hop Table Retrieval"),
+  paper("2026-emnlp-hobit", 2026, 1, "EMNLP", "hoBIT: A Profile-Aware Retrieval-Augmented Chatbot for University Academic Advising", "EMNLP 2026 Demo"),
+  paper("2026-emnlp-pearl", 2026, 2, "EMNLP", "PEARL: Front-Loading Relational Chains for Multi-Hop Table Retrieval", "EMNLP 2026"),
   paper("2026-cikm-environment-conditioned", 2026, 3, "CIKM", "Beyond Observed Auxiliary Relations: Environment-Conditioned Modeling for Multi-Behavior Recommendation"),
   paper("2026-cikm-scord", 2026, 4, "CIKM", "SCoRD: Semantic-Assisted Continual Retriever-Reranker Distillation for LLM-Based Recommendation"),
   paper("2026-cikm-item-profiles", 2026, 5, "CIKM", "Profiling What Matters: Context-Aware Item Profiles from Large-Scale Metadata for LLM Recommenders"),
@@ -40,7 +41,7 @@ export const newsItems: NewsItem[] = [
   paper("2026-sigir-filling-gaps", 2026, 14, "SIGIR", "Filling the Gaps: Selective Knowledge Augmentation for LLM Recommenders"),
   paper("2026-sigir-flame", 2026, 15, "SIGIR", "FLAME: Condensing Ensemble Diversity into a Single Network for Efficient Sequential Recommendation"),
   paper("2026-sigir-mviger", 2026, 16, "SIGIR", "MVIGER: Multi-View Variational Integration of Complementary Knowledge for Generative Recommender"),
-  paper("2026-acl-explainable-retrieval", 2026, 17, "ACL Findings", "Why These Documents? Explainable Generative Retrieval with Hierarchical Category Paths"),
+  paper("2026-acl-explainable-retrieval", 2026, 17, "ACL", "Why These Documents? Explainable Generative Retrieval with Hierarchical Category Paths", "ACL 2026 Findings"),
   { id:"2026-postech-talk", year:2026, order:18, category:"Talk", title:"Invited talk: “Knowledge-Structured Retrieval for Scientific Literature”, CSE/GSAI Seminar, POSTECH, 2026." },
   paper("2026-iclr-continual-lora", 2026, 19, "ICLR", "Continual Low-Rank Adapters for LLM-based Generative Recommender Systems"),
   { id:"2026-dasfaa-tutorial", year:2026, order:20, category:"Tutorial", venue:"DASFAA", title:"Continual Recommender Systems: A Focus on LLMs and Evolving Trends", image:"/media/publications/2026/2026-dasfaa-tutorial.png", href:"/research/dasfaa26-tutorial-continual-recommender-systems" },
@@ -55,7 +56,7 @@ export const newsItems: NewsItem[] = [
   { id:"2025-cikm-phd-mentor", year:2025, order:3, category:"Service", title:"Prof. Kang was invited as a PhD Mentor for the CIKM 2025 PhD Symposium.", href:"/people/pi" },
   { id:"2025-wsdm-best-paper", year:2025, order:4, category:"Award", title:"Our scientific document retrieval paper was selected as one of the Best Papers of WSDM 2025 and invited to ACM TIST.", href:"/publications#2025-wsdm-concept-coverage" },
   paper("2025-emnlp-topic-coverage", 2025, 5, "EMNLP", "Topic Coverage-based Demonstration Retrieval for In-Context Learning"),
-  paper("2025-emnlp-scientific-ranking", 2025, 6, "EMNLP Findings", "Scientific Paper Retrieval with LLM-Guided Semantic-Based Ranking"),
+  paper("2025-emnlp-scientific-ranking", 2025, 6, "EMNLP", "Scientific Paper Retrieval with LLM-Guided Semantic-Based Ranking", "EMNLP 2025 Findings"),
   { id:"2025-cikm-tutorial-news", year:2025, order:7, category:"Tutorial", venue:"CIKM", title:"Continual Recommender Systems", image:"/media/publications/2025/2025-cikm-tutorial.png", href:"/research/cikm25-tutorial-continual-recommender-systems" },
   paper("2025-colm-deepretrieval", 2025, 8, "COLM", "DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning"),
   paper("2025-colm-imagine-relevance", 2025, 9, "COLM", "Imagine All The Relevance: Scenario-Profiled Indexing with Knowledge Expansion for Dense Retrieval"),

@@ -182,6 +182,11 @@ test("restores the complete news archive and related links", async () => {
   assert.equal((html.match(/<article/g) ?? []).length, 42);
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-hobit")));
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-pearl")));
+  assert.match(html, /EMNLP 2026 Demo/);
+  assert.match(html, /EMNLP 2026/);
+  assert.match(html, /ACL 2026 Findings/);
+  assert.match(html, /EMNLP 2025 Findings/);
+  assert.doesNotMatch(html, /EMNLP Demo 2026|EMNLP Main 2026|ACL Findings 2026|EMNLP Findings 2025/);
   assert.ok(html.indexOf("2026-emnlp-hobit") < html.indexOf("2026-emnlp-pearl"));
   assert.match(html, /AI SeoulTech Scholarship/);
   assert.match(html, new RegExp(escapedPath("/publications#2026-cikm-environment-conditioned")));

@@ -29,6 +29,7 @@ export interface NewsItem {
   id: string;
   category: string;
   venue?: string;
+  venueLabel?: string;
   year: number;
   title: string;
   image?: string;
