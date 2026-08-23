@@ -141,7 +141,14 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
 
   const publicationsResponse = await render("/publications");
   const publicationsHtml = await publicationsResponse.text();
-  assert.equal((publicationsHtml.match(/class="paper-row"/g) ?? []).length, 59);
+  assert.equal((publicationsHtml.match(/class="paper-row"/g) ?? []).length, 61);
+  assert.match(publicationsHtml, /hoBIT: A Profile-Aware Retrieval-Augmented Chatbot for University Academic Advising/);
+  assert.match(publicationsHtml, /PEARL: Front-Loading Relational Chains for Multi-Hop Table Retrieval/);
+  assert.match(publicationsHtml, /Conference on Empirical Methods in Natural Language Processing \(EMNLP\), Demonstration/);
+  assert.match(publicationsHtml, /Conference on Empirical Methods in Natural Language Processing \(EMNLP\), Main/);
+  assert.ok(publicationsHtml.indexOf("2026-emnlp-hobit") < publicationsHtml.indexOf("2026-emnlp-pearl"));
+  assert.match(publicationsHtml, new RegExp(escapedPath("/media/publications/2026/2026-emnlp-hobit.png")));
+  assert.match(publicationsHtml, new RegExp(escapedPath("/media/publications/2026/2026-emnlp-pearl.png")));
   assert.match(publicationsHtml, new RegExp(escapedPath("/media/publications/2026/2026-cikm-environment-conditioned.jpg")));
   assert.match(publicationsHtml, /2020 and before/);
   assert.doesNotMatch(publicationsHtml, /Densifying a Trust Network for Effective Collaborative Filtering|2017-kdbc-trust-network/);
@@ -172,7 +179,10 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
 test("restores the complete news archive and related links", async () => {
   const response = await render("/news");
   const html = await response.text();
-  assert.equal((html.match(/<article/g) ?? []).length, 40);
+  assert.equal((html.match(/<article/g) ?? []).length, 42);
+  assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-hobit")));
+  assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-pearl")));
+  assert.ok(html.indexOf("2026-emnlp-hobit") < html.indexOf("2026-emnlp-pearl"));
   assert.match(html, /AI SeoulTech Scholarship/);
   assert.match(html, new RegExp(escapedPath("/publications#2026-cikm-environment-conditioned")));
   assert.match(html, new RegExp(escapedPath("/media/publications/2026/2026-cikm-environment-conditioned.jpg")));
