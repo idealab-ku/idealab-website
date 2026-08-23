@@ -36,8 +36,8 @@ const image = (year: string, id: string, extension = "png") =>
   `/media/publications/${year}/${id}.${extension}`;
 
 const publicationRecords: Omit<Publication, "topics">[] = [
-  { id:"2026-emnlp-hobit", year:2026, order:1, venue:`${V.EMNLP}, Demonstration`, title:"hoBIT: A Profile-Aware Retrieval-Augmented Chatbot for University Academic Advising", authors:"Kim Yoonseo, Seongmin Lee, Joongheon Kim, SeongKu Kang", summary:"We present a profile-aware retrieval-augmented chatbot for university academic advising.", thumbnail:image("2026", "2026-emnlp-hobit") },
-  { id:"2026-emnlp-pearl", year:2026, order:2, venue:`${V.EMNLP}, Main`, title:"PEARL: Front-Loading Relational Chains for Multi-Hop Table Retrieval", authors:"Subeen Ho, Hyeongu Kang, SeongKu Kang, Susik Yoon", summary:"We front-load relational chains for multi-hop table retrieval.", thumbnail:image("2026", "2026-emnlp-pearl") },
+  { id:"2026-emnlp-hobit", year:2026, order:1, venue:`${V.EMNLP}, Demonstration`, title:"hoBIT: A Profile-Aware Retrieval-Augmented Chatbot for University Academic Advising", authors:"Kim Yoonseo, Seongmin Lee, Joongheon Kim, SeongKu Kang", summary:"We transform hoBIT into a profile-aware RAG system that progressively acquires query-relevant profile attributes.", thumbnail:image("2026", "2026-emnlp-hobit") },
+  { id:"2026-emnlp-pearl", year:2026, order:2, venue:`${V.EMNLP}, Main`, title:"PEARL: Front-Loading Relational Chains for Multi-Hop Table Retrieval", authors:"Subeen Ho, Hyeongu Kang, SeongKu Kang, Susik Yoon", summary:"We augment table retrieval with multi-hop join-path queries and vertically partitioned corpus units.", thumbnail:image("2026", "2026-emnlp-pearl") },
   { id:"2026-cikm-environment-conditioned", year:2026, order:3, venue:V.CIKM, title:"Beyond Observed Auxiliary Relations: Environment-Conditioned Modeling for Multi-Behavior Recommendation", authors:"Seunghan Lee, Hyunsik Yoo, Jian Kang, Susik Yoon, SeongKu Kang", summary:"We refine unreliable auxiliary signals via environment-conditioned modeling.", thumbnail:image("2026", "2026-cikm-environment-conditioned", "jpg") },
   { id:"2026-cikm-scord", year:2026, order:4, venue:V.CIKM, title:"SCoRD: Semantic-Assisted Continual Retriever-Reranker Distillation for LLM-Based Recommendation", authors:"Seunghyun Baek*, Gyuseok Lee*, Seunghan Lee, Wonbin Kweon, Dong Wang, SeongKu Kang", summary:"We propose a continual update framework for retriever-reranker pipelines.", thumbnail:image("2026", "2026-cikm-scord") },
   { id:"2026-cikm-item-profiles", year:2026, order:5, venue:V.CIKM, title:"Profiling What Matters: Context-Aware Item Profiles from Large-Scale Metadata for LLM Recommenders", authors:"Dojun Hwang, Seunghan Lee, Cheonyoung Park, Sara Yu, SeongKu Kang", summary:"We structure vast item knowledge and selectively feed item information into LLM rerankers.", thumbnail:image("2026", "2026-cikm-item-profiles") },
@@ -108,8 +108,8 @@ const publicationRecords: Omit<Publication, "topics">[] = [
 const t = (...topics: PublicationTopic[]) => topics;
 
 const publicationTopicsById: Record<string, PublicationTopic[]> = {
-  "2026-emnlp-hobit": t("llms", "search-retrieval", "rag"),
-  "2026-emnlp-pearl": t("search-retrieval", "knowledge-mining"),
+  "2026-emnlp-hobit": t("llms", "search-retrieval", "rag", "efficiency-scalability"),
+  "2026-emnlp-pearl": t("llms", "search-retrieval", "knowledge-mining", "efficiency-scalability"),
   "2026-cikm-environment-conditioned": t("recommendation", "bias-robustness"),
   "2026-cikm-scord": t("llms", "recommendation", "continual-learning", "knowledge-distillation", "efficiency-scalability"),
   "2026-cikm-item-profiles": t("llms", "recommendation", "knowledge-mining", "rag", "efficiency-scalability"),
