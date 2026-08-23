@@ -155,6 +155,7 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.match(publicationsHtml, /<sup class="author-mark-corresponding">†<\/sup>/);
   assert.doesNotMatch(publicationsHtml, /Paper \/ page/);
   assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2106\.08700/);
+  assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2608\.19998/);
   assert.match(publicationsHtml, /Filter by research topic/);
   assert.match(publicationsHtml, /id="publication-filter"/);
   assert.match(publicationsHtml, /AI for Science/);
