@@ -309,11 +309,11 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .course-information-grid p{margin:0 0 14px}
 .course-information-grid li+li{margin-top:7px}
 .course-note{margin:16px 0 0!important;padding-top:14px;border-top:1px solid var(--line);font-size:16px!important}
-.course-embed{padding:40px 0;border-top:1px solid var(--line)}
+.course-embed{min-width:0;padding:40px 0;border-top:1px solid var(--line)}
 .course-section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:18px}
 .course-section-heading h2{margin:0}
 .course-section-heading a{flex:0 0 auto;color:var(--teal-dark);font-size:17px;font-weight:650}
-.course-embed iframe{display:block;width:100%;height:620px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.course-embed iframe{display:block;width:100%;max-width:100%;height:620px;border:1px solid var(--line);border-radius:12px;background:#fff}
 .course-offerings{padding:40px 0;border-top:1px solid var(--line)}
 .course-offerings>div{border-top:1px solid var(--line)}
 .course-offerings article{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:19px 0;border-bottom:1px solid var(--line)}
@@ -354,7 +354,7 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .schedule-page>iframe{display:block;width:100%;height:680px;border:1px solid var(--line);border-radius:14px;background:#fff}
 
 @media(min-width:1200px){
-  .course-embed iframe{position:relative;left:50%;width:min(1440px,calc(100vw - 48px));height:720px;transform:translateX(-50%)}
+  .course-embed iframe{height:720px}
 }
 @media(max-width:800px){
   .shell{width:min(100% - 32px,1088px)}
