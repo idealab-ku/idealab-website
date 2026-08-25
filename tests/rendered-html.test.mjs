@@ -158,6 +158,7 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2608\.19998/);
   assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2608\.20801/);
   assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2608\.22920/);
+  assert.match(publicationsHtml, /https:\/\/idealab-ku\.github\.io\/hobit-emnlp\//);
   assert.match(publicationsHtml, /Filter by research topic/);
   assert.match(publicationsHtml, /id="publication-filter"/);
   assert.match(publicationsHtml, /AI for Science/);
