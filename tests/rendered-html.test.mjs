@@ -283,8 +283,10 @@ test("keeps event captions matched to the verified local photographs", async () 
   const workshopResponse = await render("/events/joint-workshop");
   const workshopHtml = await workshopResponse.text();
   assert.match(workshopHtml, /26\.08\.28 · IDEA × DAIS Joint Workshop/);
+  assert.match(workshopHtml, /황도준 — Recent work on Profiling for LLM-based Recommendation/);
   assert.match(workshopHtml, /Structure Shapes the Future of Data × LLM Systems/);
-  assert.match(workshopHtml, /Retrieval for Scientific RAG/);
+  assert.match(workshopHtml, /15:00–16:00 · Invited talk[^]*?<strong>Speaker:<\/strong>[^]*?권원빈 교수 \(성균관대학교\)[^]*?<strong>Title:<\/strong>/);
+  assert.match(workshopHtml, /16:00–17:30 · IDEA × DAIS × MIND LAB research sharing and discussion[^]*?<ul class="workshop-sublist">[^]*?이제윤 — Recent work on Retrieval for Scientific RAG/);
   assert.doesNotMatch(workshopHtml, /목표:|안내 사항|안내사항/);
 
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");

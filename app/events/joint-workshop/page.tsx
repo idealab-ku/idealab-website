@@ -1,21 +1,43 @@
 import { PageHero, SiteFrame } from "../../components";
 
-const workshops = [
+type WorkshopProgramItem = string | {
+  text: string;
+  details: Array<{ label?: string; text: string }>;
+};
+
+type Workshop = {
+  id: string;
+  title: string;
+  meta: string[];
+  program: WorkshopProgramItem[];
+};
+
+const workshops: Workshop[] = [
   {
     id: "workshop-2026-08",
     title: "26.08.28 · IDEA × DAIS Joint Workshop",
     meta: ["Date: August 28, 2026 · 13:00–17:30"],
     program: [
       "13:00–13:15 · 김윤서",
-      "13:15–13:30 · 황도준 — Profiling for LLM-based Recommendation",
-      "13:30–13:45 · 강동혁 — 추천 시스템 내 멀티모달 아이템의 개념 단위 개인화",
-      "13:45–14:00 · 이승한 — 멀티모달 추천시스템의 발전 역사와 한계점",
-      "14:00–14:15 · 이성은 — 과학 논문 검색을 위한 Fine-grained Indexing",
-      "14:15–14:30 · 백승현 — 세션 기반 추천시스템을 위한 유저 프로파일링",
-      "14:30–14:45 · 최정우 — Local Citation Recommendation",
-      "15:00–16:00 · Invited talk — 권원빈 교수님, 성균관대학교: Structure Shapes the Future of Data × LLM Systems: Retrieval, Structuring, and Reasoning",
-      "16:00–17:30 · IDEA × DAIS × MIND LAB research sharing and discussion",
-      "Research sharing · 이제윤 — Retrieval for Scientific RAG",
+      "13:15–13:30 · 황도준 — Recent work on Profiling for LLM-based Recommendation",
+      "13:30–13:45 · 강동혁 — Recent work on 추천 시스템 내 멀티모달 아이템의 개념 단위 개인화",
+      "13:45–14:00 · 이승한 — Recent work on 멀티모달 추천시스템의 발전 역사와 한계점",
+      "14:00–14:15 · 이성은 — Recent work on 과학 논문 검색을 위한 Fine-grained Indexing",
+      "14:15–14:30 · 백승현 — Recent work on 세션 기반 추천시스템을 위한 유저 프로파일링",
+      "14:30–14:45 · 최정우 — Recent work on Local Citation Recommendation",
+      {
+        text: "15:00–16:00 · Invited talk",
+        details: [
+          { label: "Speaker", text: "권원빈 교수 (성균관대학교)" },
+          { label: "Title", text: "Structure Shapes the Future of Data × LLM Systems: Retrieval, Structuring, and Reasoning" },
+        ],
+      },
+      {
+        text: "16:00–17:30 · IDEA × DAIS × MIND LAB research sharing and discussion",
+        details: [
+          { text: "이제윤 — Recent work on Retrieval for Scientific RAG" },
+        ],
+      },
     ],
   },
   {
@@ -40,7 +62,11 @@ export default function JointWorkshop() {
         <h2>{workshop.title}</h2>
         {workshop.meta.map((line) => <p key={line}>{line}</p>)}
         <h3>Program</h3>
-        <ul>{workshop.program.map((line) => <li key={line}>{line}</li>)}</ul>
+        <ul>{workshop.program.map((item) => typeof item === "string"
+          ? <li key={item}>{item}</li>
+          : <li key={item.text}>{item.text}<ul className="workshop-sublist">{item.details.map((detail) => <li key={`${detail.label ?? "detail"}-${detail.text}`}>
+            {detail.label && <strong>{`${detail.label}:`}</strong>} {detail.text}
+          </li>)}</ul></li>)}</ul>
       </article>)}
     </section>
   </SiteFrame>;
