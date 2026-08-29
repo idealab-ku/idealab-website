@@ -268,6 +268,8 @@ test("keeps event captions matched to the verified local photographs", async () 
   assert.match(html, /DASFAA 2026/);
   assert.match(html, /CIKM 2025/);
   assert.match(html, /IDEA × DAIS Joint Workshop/);
+  assert.match(html, /August 28, 2026/);
+  assert.match(html, new RegExp(`${escapedPath("/events/joint-workshop")}#workshop-2026-08`));
   assert.match(html, /Tutorials &amp; Workshops/);
   assert.match(html, />Gallery</);
   assert.match(html, /DASFAA 2026 Tutorial[^]*?2026-04-27[^]*?Continual Recommender Systems: A Focus on LLMs and Evolving Trends/);
@@ -277,6 +279,16 @@ test("keeps event captions matched to the verified local photographs", async () 
   assert.doesNotMatch(html, /<figure[^>]*class="wide"/);
   assert.doesNotMatch(html, /Invited talk at UIUC/);
   assert.doesNotMatch(html, /DAIS Lab @ Korea University/);
+
+  const workshopResponse = await render("/events/joint-workshop");
+  const workshopHtml = await workshopResponse.text();
+  assert.match(workshopHtml, /26\.08\.28 · IDEA × DAIS Joint Workshop/);
+  assert.match(workshopHtml, /Structure Shapes the Future of Data × LLM Systems/);
+  assert.match(workshopHtml, /Retrieval for Scientific RAG/);
+  assert.doesNotMatch(workshopHtml, /목표:|안내 사항|안내사항/);
+
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /\.detail-page\{[^}]*max-width:none/);
 });
 
 test("restores teaching years, course pages, embeds, and archive links", async () => {

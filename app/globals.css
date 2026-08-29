@@ -287,7 +287,7 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .simple-records .publication-year:not(:first-child){margin-top:56px}
 .simple-records h2 a:hover{color:var(--teal-dark)}
 .simple-records .record-recognition{display:block;margin-top:6px;color:var(--teal-dark);font-weight:700}
-.detail-page{padding:0 0 76px;max-width:850px}
+.detail-page{padding:0 0 76px;max-width:none}
 .detail-page article{padding:34px;border:1px solid var(--line);border-radius:14px;margin-bottom:24px}
 .detail-page h2{font-size:26px;line-height:1.35;margin:8px 0 18px}
 .detail-page h3{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-dark);margin:30px 0 13px}

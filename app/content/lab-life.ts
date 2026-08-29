@@ -2,6 +2,7 @@ import type { FeaturedEvent, LabLifeEvent } from "./types";
 import { assertUniqueIds } from "./guards";
 
 export const featuredEvents: FeaturedEvent[] = [
+  { id:"joint-workshop-2026-08", category:"workshop", date:"August 28, 2026", dateTime:"2026-08-28", title:"IDEA × DAIS Joint Workshop", subtitle:"Korea University", href:"/events/joint-workshop#workshop-2026-08", image:"/media/brand/korea-university-logo.png" },
   { id:"dasfaa-2026", category:"tutorial", date:"April 27, 2026", dateTime:"2026-04-27", title:"DASFAA 2026 Tutorial", subtitle:"Continual Recommender Systems: A Focus on LLMs and Evolving Trends", href:"/research/dasfaa26-tutorial-continual-recommender-systems", image:"/media/publications/2026/2026-dasfaa-tutorial.png" },
   { id:"joint-workshop-2026", category:"workshop", date:"February 23, 2026", dateTime:"2026-02-23", title:"IDEA × DAIS Joint Workshop", subtitle:"Korea University", href:"/events/joint-workshop", image:"/media/brand/korea-university-logo.png" },
   { id:"cikm-2025", category:"tutorial", date:"November 10, 2025", dateTime:"2025-11-10", title:"CIKM 2025 Tutorial", subtitle:"Continual Recommender Systems", href:"/research/cikm25-tutorial-continual-recommender-systems", image:"/media/publications/2025/2025-cikm-tutorial.png" },
