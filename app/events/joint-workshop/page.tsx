@@ -18,12 +18,12 @@ const workshops: Workshop[] = [
     title: "26.08.28 · IDEA × DAIS Joint Workshop",
     meta: ["Date: August 28, 2026 · 13:00–17:30"],
     program: [
-      "13:00–13:15 · 김윤서",
+      "13:00–13:15 · 김윤서 — Recent work on Graph RAG",
       "13:15–13:30 · 황도준 — Recent work on Profiling for LLM-based Recommendation",
-      "13:30–13:45 · 강동혁 — Recent work on 추천 시스템 내 멀티모달 아이템의 개념 단위 개인화",
-      "13:45–14:00 · 이승한 — Recent work on 멀티모달 추천시스템의 발전 역사와 한계점",
-      "14:00–14:15 · 이성은 — Recent work on 과학 논문 검색을 위한 Fine-grained Indexing",
-      "14:15–14:30 · 백승현 — Recent work on 세션 기반 추천시스템을 위한 유저 프로파일링",
+      "13:30–13:45 · 강동혁 — Recent work on Concept-Level Personalization of Multimodal Items in Recommender Systems",
+      "13:45–14:00 · 이승한 — Recent work on Evolution and Limitations of Multimodal Recommender Systems",
+      "14:00–14:15 · 이성은 — Recent work on Fine-Grained Indexing for Scientific Literature Retrieval",
+      "14:15–14:30 · 백승현 — Recent work on User Profiling for Session-Based Recommendation",
       "14:30–14:45 · 최정우 — Recent work on Local Citation Recommendation",
       {
         text: "15:00–16:00 · Invited talk",

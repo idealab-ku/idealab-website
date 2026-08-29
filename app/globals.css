@@ -294,8 +294,8 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .detail-page p,.detail-page li{font-size:16px;line-height:1.75;color:var(--muted)}
 .detail-page ul,.detail-page ol{padding-left:21px}
 .detail-page .workshop-sublist{margin:7px 0 10px;padding-left:24px}
-.detail-page .workshop-sublist li{margin:3px 0;color:var(--navy)}
-.detail-page .workshop-sublist strong{font-weight:700;color:var(--teal-dark)}
+.detail-page .workshop-sublist li{margin:3px 0;color:inherit}
+.detail-page .workshop-sublist strong{font-weight:700;color:inherit}
 .course-detail{padding:0 0 80px;max-width:none}
 .course-detail h2{font-size:24px;line-height:1.35;letter-spacing:-.02em;margin:0 0 18px}
 .course-detail p,.course-detail li{font-size:17px;line-height:1.75;color:var(--muted)}

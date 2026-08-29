@@ -283,7 +283,13 @@ test("keeps event captions matched to the verified local photographs", async () 
   const workshopResponse = await render("/events/joint-workshop");
   const workshopHtml = await workshopResponse.text();
   assert.match(workshopHtml, /26\.08\.28 · IDEA × DAIS Joint Workshop/);
+  assert.match(workshopHtml, /김윤서 — Recent work on Graph RAG/);
   assert.match(workshopHtml, /황도준 — Recent work on Profiling for LLM-based Recommendation/);
+  assert.match(workshopHtml, /강동혁 — Recent work on Concept-Level Personalization of Multimodal Items in Recommender Systems/);
+  assert.match(workshopHtml, /이승한 — Recent work on Evolution and Limitations of Multimodal Recommender Systems/);
+  assert.match(workshopHtml, /이성은 — Recent work on Fine-Grained Indexing for Scientific Literature Retrieval/);
+  assert.match(workshopHtml, /백승현 — Recent work on User Profiling for Session-Based Recommendation/);
+  assert.doesNotMatch(workshopHtml, /Recent work on (추천 시스템|멀티모달|과학 논문|세션 기반)/);
   assert.match(workshopHtml, /Structure Shapes the Future of Data × LLM Systems/);
   assert.match(workshopHtml, /15:00–16:00 · Invited talk[^]*?<strong>Speaker:<\/strong>[^]*?권원빈 교수 \(성균관대학교\)[^]*?<strong>Title:<\/strong>/);
   assert.match(workshopHtml, /16:00–17:30 · IDEA × DAIS × MIND LAB research sharing and discussion[^]*?<ul class="workshop-sublist">[^]*?이제윤 — Recent work on Retrieval for Scientific RAG/);
@@ -291,6 +297,8 @@ test("keeps event captions matched to the verified local photographs", async () 
 
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   assert.match(css, /\.detail-page\{[^}]*max-width:none/);
+  assert.match(css, /\.detail-page \.workshop-sublist li\{[^}]*color:inherit/);
+  assert.match(css, /\.detail-page \.workshop-sublist strong\{[^}]*color:inherit/);
 });
 
 test("restores teaching years, course pages, embeds, and archive links", async () => {
