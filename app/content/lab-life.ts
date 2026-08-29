@@ -9,6 +9,7 @@ export const featuredEvents: FeaturedEvent[] = [
 ];
 
 export const labLifeEvents: LabLifeEvent[] = [
+  { id: "joint-workshop-2026-08", title: "Joint workshop · 2026.08", image: "/media/lab-life/2026-08-joint-workshop.jpg" },
   { id: "sigir-2026", title: "SIGIR 2026", image: "/media/lab-life/2026-sigir-conference.jpg" },
   { id: "dasfaa-2026", title: "DASFAA 2026", image: "/media/lab-life/2026-dasfaa-photo-booth.jpg" },
   { id: "itrc-2026-04", title: "ITRC Talent Development Exhibition · 2026.04", image: "/media/lab-life/2026-04-itrc-exhibition.jpg" },

@@ -250,6 +250,7 @@ test("keeps event captions matched to the verified local photographs", async () 
   const response = await render("/events");
   const html = await response.text();
   const expectedPairs = [
+    ["2026-08-joint-workshop.jpg", "Joint workshop · 2026.08"],
     ["2026-sigir-conference.jpg", "SIGIR 2026"],
     ["2026-dasfaa-photo-booth.jpg", "DASFAA 2026"],
     ["2026-04-itrc-exhibition.jpg", "ITRC Talent Development Exhibition"],
