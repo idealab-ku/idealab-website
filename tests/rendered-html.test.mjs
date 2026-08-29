@@ -291,7 +291,7 @@ test("keeps event captions matched to the verified local photographs", async () 
   assert.match(workshopHtml, /백승현 — Recent work on User Profiling for Session-Based Recommendation/);
   assert.doesNotMatch(workshopHtml, /Recent work on (추천 시스템|멀티모달|과학 논문|세션 기반)/);
   assert.match(workshopHtml, /Structure Shapes the Future of Data × LLM Systems/);
-  assert.match(workshopHtml, /15:00–16:00 · Invited talk[^]*?<strong>Speaker:<\/strong>[^]*?권원빈 교수 \(성균관대학교\)[^]*?<strong>Title:<\/strong>/);
+  assert.match(workshopHtml, /15:00–16:00 · Invited talk[^]*?<strong>Speaker:<\/strong>[^]*?권원빈 교수님 \(성균관대학교\)[^]*?<strong>Title:<\/strong>/);
   assert.match(workshopHtml, /16:00–17:30 · IDEA × DAIS × MIND LAB research sharing and discussion[^]*?<ul class="workshop-sublist">[^]*?이제윤 — Recent work on Retrieval for Scientific RAG/);
   assert.doesNotMatch(workshopHtml, /목표:|안내 사항|안내사항/);
 

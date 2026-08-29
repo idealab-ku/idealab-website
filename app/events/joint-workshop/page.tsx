@@ -28,7 +28,7 @@ const workshops: Workshop[] = [
       {
         text: "15:00–16:00 · Invited talk",
         details: [
-          { label: "Speaker", text: "권원빈 교수 (성균관대학교)" },
+          { label: "Speaker", text: "권원빈 교수님 (성균관대학교)" },
           { label: "Title", text: "Structure Shapes the Future of Data × LLM Systems: Retrieval, Structuring, and Reasoning" },
         ],
       },
