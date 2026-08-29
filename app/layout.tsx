@@ -23,14 +23,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SCQF7FXG3" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5RXZS3JK9S" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-4SCQF7FXG3');
+              gtag('config', 'G-5RXZS3JK9S');
             `,
           }}
         />
