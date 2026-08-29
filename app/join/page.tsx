@@ -1,6 +1,9 @@
 import { PageHero, SiteFrame } from "../components";
 import { application, faqItems } from "../content/join";
 import { sitePath } from "../site-path";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({ title: "Join IDEA Lab", description: "Graduate and undergraduate research opportunities at IDEA Lab, Korea University, in recommender systems, information retrieval, data mining, and AI.", path: "/join" });
 
 export default function Join() {
   return <SiteFrame>

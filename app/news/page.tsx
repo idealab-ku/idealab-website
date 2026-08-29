@@ -2,6 +2,9 @@ import { Fragment } from "react";
 import { PageHero, SiteFrame } from "../components";
 import { newsItems, newsYears } from "../content/news";
 import { sitePath } from "../site-path";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({ title: "News", description: "Recent publications, awards, talks, teaching updates, and research news from IDEA Lab at Korea University.", path: "/news" });
 
 export default function News() {
   return <SiteFrame>

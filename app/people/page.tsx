@@ -1,6 +1,9 @@
 import { PageHero, SiteFrame } from "../components";
 import { alumni, convergenceStudents, currentInterns, currentStudents, principalInvestigator } from "../content/people";
 import { sitePath } from "../site-path";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({ title: "People", description: "Meet the faculty, graduate students, undergraduate researchers, and alumni of IDEA Lab at Korea University.", path: "/people" });
 
 export default function People() {
   return <SiteFrame>

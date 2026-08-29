@@ -1,5 +1,8 @@
 import { PageHero, SiteFrame } from "../../components";
 import { publicCalendarUrl, zoomUrl } from "../../content/schedule";
+import { pageMetadata } from "../../seo";
+
+export const metadata = pageMetadata({ title: "SeongKu Kang — Schedule", description: "Public schedule and meeting information for Professor SeongKu Kang at Korea University.", path: "/people/schedule" });
 
 export default function Schedule() {
   return <SiteFrame>

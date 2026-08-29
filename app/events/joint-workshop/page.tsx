@@ -1,4 +1,7 @@
 import { PageHero, SiteFrame } from "../../components";
+import { pageMetadata } from "../../seo";
+
+export const metadata = pageMetadata({ title: "IDEA Lab Joint Workshop", description: "Joint research workshop featuring talks on personalization, recommender systems, information retrieval, and data mining.", path: "/events/joint-workshop" });
 
 type WorkshopProgramItem = string | {
   text: string;

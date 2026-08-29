@@ -1,6 +1,9 @@
 import { PageHero, SiteFrame } from "../components";
 import { majorResearchProjects, researchAreas, researchCollaborators } from "../content/research";
 import { sitePath } from "../site-path";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({ title: "Research", description: "Research at IDEA Lab on recommender systems, information retrieval, data mining, personalization, multimodal learning, and large language models.", path: "/research" });
 
 export default function Research() {
   return <SiteFrame>

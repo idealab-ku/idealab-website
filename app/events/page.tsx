@@ -1,5 +1,8 @@
 import { PageHero, SiteFrame } from "../components";
 import { featuredEvents, labLifeEvents } from "../content/lab-life";
 import { sitePath } from "../site-path";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({ title: "Events", description: "IDEA Lab tutorials, workshops, invited talks, conferences, research events, and lab activities.", path: "/events" });
 
 export default function Events(){return <SiteFrame><PageHero index="05" eyebrow="Events" title="Events" intro="Tutorials, workshops, talks, conferences, and life at IDEA Lab."/><section className="event-section shell"><div className="event-section-heading"><h2>Tutorials &amp; Workshops</h2></div><div className="event-list">{featuredEvents.map((event)=><a href={sitePath(event.href)} key={event.id} className={event.category === "workshop" ? "event-card-collaboration" : "event-card-with-image"}><div className="event-card-visual"><img src={sitePath(event.image)} alt={`${event.title} mark`}/></div><div className="event-card-body"><div><h2>{event.title}</h2><time dateTime={event.dateTime}>{event.date}</time><p>{event.subtitle}</p></div><span className="event-arrow" aria-hidden="true">↗︎</span></div></a>)}</div></section><section className="event-section event-gallery-section shell"><div className="event-section-heading"><h2>Gallery</h2></div><div className="gallery">{labLifeEvents.map((event,index)=><figure key={event.id}><img src={sitePath(event.image)} alt={event.title}/><figcaption><span>{String(index+1).padStart(2,"0")}</span>{event.title}</figcaption></figure>)}</div></section></SiteFrame>}

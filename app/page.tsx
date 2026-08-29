@@ -1,10 +1,60 @@
 import { Footer, Header } from "./components";
 import { recentNews } from "./content/news";
 import { researchAreas } from "./content/research";
+import { siteInfo } from "./content/site";
+import { JsonLd, pageMetadata } from "./seo";
 import { sitePath } from "./site-path";
 
+export const metadata = pageMetadata({
+  title: "IDEA Lab — Korea University",
+  description: "IDEA Lab at Korea University researches recommender systems, information retrieval, data mining, personalization, and large language models.",
+  path: "/",
+  image: "/favicon-512.png",
+});
+
 export default function Home() {
-  return <><Header /><main>
+  const organizationId = `${siteInfo.url}/#organization`;
+
+  return <><JsonLd data={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteInfo.url}/#website`,
+        url: siteInfo.url,
+        name: siteInfo.shortName,
+        alternateName: siteInfo.fullName,
+        publisher: { "@id": organizationId },
+        inLanguage: "en",
+      },
+      {
+        "@type": "ResearchOrganization",
+        "@id": organizationId,
+        name: siteInfo.fullName,
+        alternateName: siteInfo.shortName,
+        url: siteInfo.url,
+        logo: `${siteInfo.url}${sitePath("/favicon-512.png")}`,
+        email: siteInfo.contactEmail,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Seoul",
+          addressCountry: "KR",
+        },
+        parentOrganization: {
+          "@type": "CollegeOrUniversity",
+          name: siteInfo.university,
+          url: siteInfo.universityUrl,
+        },
+        knowsAbout: [
+          "Recommender systems",
+          "Information retrieval",
+          "Data mining",
+          "Personalization",
+          "Large language models",
+        ],
+      },
+    ],
+  }} /><Header /><main>
     <section className="home-hero shell">
       <div className="home-copy">
         <h1>Intelligent Data Science &amp;<br />Applications Lab, Korea University</h1>

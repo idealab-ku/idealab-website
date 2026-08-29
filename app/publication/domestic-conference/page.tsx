@@ -1,6 +1,9 @@
 import { Fragment } from "react";
 import { PageHero, SiteFrame } from "../../components";
 import { domesticPublications } from "../../content/publication-supplements";
+import { pageMetadata } from "../../seo";
+
+export const metadata = pageMetadata({ title: "Domestic Conference Publications", description: "IDEA Lab publications presented at Korean domestic research conferences.", path: "/publication/domestic-conference" });
 
 const domesticYears = [...new Set(domesticPublications.map((publication) => publication.year))]
   .sort((a, b) => b - a);

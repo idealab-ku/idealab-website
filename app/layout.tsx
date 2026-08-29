@@ -5,8 +5,35 @@ import { sitePath } from "./site-path";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteInfo.url),
-  title: `${siteInfo.shortName} — ${siteInfo.university}`,
-  description: `${siteInfo.fullName} at ${siteInfo.university}.`,
+  title: {
+    default: `${siteInfo.shortName} — ${siteInfo.university}`,
+    template: `%s | ${siteInfo.shortName}`,
+  },
+  description: `${siteInfo.fullName} at ${siteInfo.university}, researching recommender systems, information retrieval, data mining, and large language models.`,
+  applicationName: siteInfo.shortName,
+  keywords: [
+    "IDEA Lab",
+    "Korea University",
+    "recommender systems",
+    "information retrieval",
+    "data mining",
+    "large language models",
+    "artificial intelligence",
+  ],
+  authors: [{ name: siteInfo.fullName, url: siteInfo.url }],
+  creator: siteInfo.fullName,
+  publisher: siteInfo.university,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [
       { url: sitePath("/favicon.ico") },

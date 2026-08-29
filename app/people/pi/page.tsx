@@ -1,10 +1,44 @@
 import { PageHero, SiteFrame } from "../../components";
 import { principalInvestigator } from "../../content/people";
 import { piProfileSections } from "../../content/pi-profile";
+import { siteInfo } from "../../content/site";
+import { JsonLd, pageMetadata } from "../../seo";
 import { sitePath } from "../../site-path";
+
+export const metadata = pageMetadata({
+  title: "SeongKu Kang — Principal Investigator",
+  description: "SeongKu Kang is an Assistant Professor at Korea University and principal investigator of IDEA Lab, researching recommender systems, information retrieval, and data mining.",
+  path: "/people/pi",
+  image: "/media/people/seongku.jpg",
+});
 
 export default function Pi() {
   return <SiteFrame>
+    <JsonLd data={{
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      mainEntity: {
+        "@type": "Person",
+        "@id": `${siteInfo.url}/people/pi#seongku-kang`,
+        name: principalInvestigator.name,
+        alternateName: principalInvestigator.koreanName,
+        jobTitle: principalInvestigator.role,
+        url: `${siteInfo.url}/people/pi`,
+        image: `${siteInfo.url}${sitePath(principalInvestigator.image)}`,
+        email: principalInvestigator.email,
+        affiliation: {
+          "@type": "CollegeOrUniversity",
+          name: siteInfo.university,
+          url: siteInfo.universityUrl,
+        },
+        worksFor: { "@id": `${siteInfo.url}/#organization` },
+        knowsAbout: principalInvestigator.interests,
+        sameAs: [
+          "https://seongku-kang.github.io/",
+          "https://scholar.google.com/citations?user=fB0K-fMAAAAJ&hl=en",
+        ],
+      },
+    }} />
     <PageHero index="" eyebrow="People" title="Principal Investigator" intro="SeongKu Kang · Korea University" />
     <section className="profile-detail shell">
       <aside>

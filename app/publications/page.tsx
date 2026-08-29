@@ -1,6 +1,9 @@
 import { PageHero, SiteFrame } from "../components";
 import { PublicationBrowser } from "./publication-browser";
 import { sitePath } from "../site-path";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({ title: "Publications", description: "Research publications from IDEA Lab in recommender systems, information retrieval, data mining, NLP, and large language models.", path: "/publications" });
 
 export default function Publications() {
   return <SiteFrame>

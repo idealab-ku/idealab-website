@@ -1,6 +1,9 @@
 import { PageHero, SiteFrame } from "../components";
 import { courses, courseYears } from "../content/teaching";
 import { sitePath } from "../site-path";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({ title: "Teaching", description: "Artificial intelligence, big data analysis, text mining, and natural language processing courses taught by IDEA Lab at Korea University.", path: "/teaching" });
 
 export default function Teaching() {
   return <SiteFrame>
