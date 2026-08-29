@@ -19,11 +19,11 @@ const workshops: Workshop[] = [
     meta: ["Date: August 28, 2026 · 13:00–17:30"],
     program: [
       "13:00–13:15 · 김윤서 — Recent work on Graph RAG",
-      "13:15–13:30 · 황도준 — Recent work on Profiling for LLM-based Recommendation",
-      "13:30–13:45 · 강동혁 — Recent work on Concept-Level Personalization of Multimodal Items in Recommender Systems",
-      "13:45–14:00 · 이승한 — Recent work on Evolution and Limitations of Multimodal Recommender Systems",
-      "14:00–14:15 · 이성은 — Recent work on Fine-Grained Indexing for Scientific Literature Retrieval",
-      "14:15–14:30 · 백승현 — Recent work on User Profiling for Session-Based Recommendation",
+      "13:15–13:30 · 황도준 — Recent work on LLM-based Recommendation",
+      "13:30–13:45 · 강동혁 — Recent work on Multimodal Personalization",
+      "13:45–14:00 · 이승한 — Recent work on Multimodal Recommendation",
+      "14:00–14:15 · 이성은 — Recent work on Scientific Document Retrieval",
+      "14:15–14:30 · 백승현 — Recent work on Session-based Recommendation",
       "14:30–14:45 · 최정우 — Recent work on Local Citation Recommendation",
       {
         text: "15:00–16:00 · Invited talk",
@@ -35,7 +35,7 @@ const workshops: Workshop[] = [
       {
         text: "16:00–17:30 · IDEA × DAIS × MIND LAB research sharing and discussion",
         details: [
-          { text: "이제윤 — Recent work on Retrieval for Scientific RAG" },
+          { text: "이제윤 — Recent work on Scientific RAG" },
         ],
       },
     ],
