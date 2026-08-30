@@ -159,6 +159,7 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2608\.20801/);
   assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2608\.22920/);
   assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2608\.16075/);
+  assert.match(publicationsHtml, new RegExp(escapedPath("/media/publications/2026/papers/2026-cikm-spectral-decoupling.pdf")));
   assert.match(publicationsHtml, /https:\/\/idealab-ku\.github\.io\/hobit-emnlp\/static\/pdf\/hobit-paper\.pdf/);
   assert.match(publicationsHtml, /Filter by research topic/);
   assert.match(publicationsHtml, /id="publication-filter"/);
