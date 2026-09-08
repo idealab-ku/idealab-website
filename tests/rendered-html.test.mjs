@@ -389,6 +389,7 @@ test("keeps the Join us page faithful to the public admission notice and FAQ", a
   assert.doesNotMatch(applicationInstructions, /<a\b|mailto:/);
   assert.match(html, /Do I need to have any qualifications to join your research group\?/);
   assert.match(html, /with a particular emphasis on large language models \(LLMs\) as reasoning agents/);
+  assert.match(html, /Data Mining \(KDD, WWW, CIKM\), Information Retrieval \(SIGIR, WSDM\)/);
   assert.match(html, /Sufficient English proficiency to read and understand research papers/);
   assert.equal((html.match(/class="faq-requirements"/g) ?? []).length, 1);
   assert.match(html, /Undergraduate internships are offered twice a year/);
