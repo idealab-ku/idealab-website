@@ -35,8 +35,9 @@ export default function Research() {
           {majorResearchProjects.map((project) => <li className="research-project-item" key={project.id}>
             <h3>{project.title}</h3>
             <p className="research-project-meta">
-              <span>{project.partner}</span>
-              {project.period && <span>{project.period}</span>}
+              <span className="research-project-partner">{project.partner}</span>
+              <span className="research-project-period">{project.period}</span>
+              <span className="research-project-role" aria-label={project.isPrincipalInvestigator ? "Principal Investigator" : undefined}>{project.isPrincipalInvestigator ? "PI" : ""}</span>
             </p>
           </li>)}
         </ul>
