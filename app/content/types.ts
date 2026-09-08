@@ -82,7 +82,7 @@ export interface MajorResearchProject {
   title: string;
   partner: string;
   period?: string;
-  isPrincipalInvestigator?: boolean;
+  role?: "lead" | "participant";
   isPublic?: boolean;
 }
 

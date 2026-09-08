@@ -28,7 +28,7 @@ export const piProfileSections: ProfileSection[] = [
   },
   {
     title: "Major R&D Projects",
-    groups: [{ entries: majorResearchProjects.map((project) => ({ period: project.period, text: `${project.title} · ${project.partner}${project.isPrincipalInvestigator ? " · PI" : ""}` })) }],
+    groups: [{ entries: majorResearchProjects.map((project) => ({ period: project.period, text: `${project.title} · ${project.partner} · ${project.role === "lead" ? "책임" : "참여"}` })) }],
   },
   {
     title: "Awards and Distinctions",
