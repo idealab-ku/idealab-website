@@ -101,6 +101,8 @@ test("keeps required people and publication records visible", async () => {
   assert.match(peopleHtml, /aria-label="Dojun Hwang website"[^>]*>↗/);
   assert.match(peopleHtml, /aria-label="Yoonseo Kim website"[^>]*>↗/);
   assert.match(peopleHtml, /aria-label="Youngjune Lee website"[^>]*>↗/);
+  assert.match(peopleHtml, /href="mailto:dudwns511@korea\.ac\.kr"/);
+  assert.doesNotMatch(peopleHtml, /yjlee511@gmail\.com/);
   assert.doesNotMatch(peopleHtml, />Website ↗</);
   assert.match(peopleHtml, /Google Scholar <span class="link-arrow" aria-hidden="true">↗︎<\/span>/);
 for (const name of ["권순률", "서정범", "민채정", "이람", "김병준", "조강훈", "김동혁"]) {
