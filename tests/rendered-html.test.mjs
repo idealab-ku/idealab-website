@@ -175,6 +175,8 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.match(publicationsHtml, /Bias &amp; Robustness/);
   assert.match(publicationsHtml, /Multiple selections match all selected topics/);
   assert.match(publicationsHtml, /aria-pressed="true"[^>]*>All/);
+  assert.match(publicationsHtml, new RegExp(escapedPath("/research/cikm25-tutorial-continual-recommender-systems")));
+  assert.doesNotMatch(publicationsHtml, new RegExp(`href="${escapedPath("/research/tutorial-continual-recommender-systems")}`));
 
   const domesticResponse = await render("/publication/domestic-conference");
   const domesticHtml = await domesticResponse.text();
