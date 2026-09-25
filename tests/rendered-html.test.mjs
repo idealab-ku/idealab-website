@@ -153,7 +153,7 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.ok(publicationsHtml.indexOf("2026-emnlp-pearl") < publicationsHtml.indexOf("2026-cikm-keir-compact-sparse-spaces"));
   assert.ok(publicationsHtml.indexOf("2026-cikm-keir-compact-sparse-spaces") < publicationsHtml.indexOf("2026-cikm-environment-conditioned"));
   assert.match(publicationsHtml, /Concepts Complement Dense Semantics: Learning Compact Sparse Spaces for Text-Image Retrieval/);
-  assert.match(publicationsHtml, /Yoonseo Kim, Jungwoo Choi, Cheonyoung Park, Youngwook Kim, Yongho Song, SeongKu Kang/);
+  assert.match(publicationsHtml, /Yoonseo Kim<sup class="author-mark-equal">\*<\/sup>, Jungwoo Choi<sup class="author-mark-equal">\*<\/sup>, Cheonyoung Park, Youngwook Kim, Yongho Song, SeongKu Kang/);
   assert.match(publicationsHtml, /ACM International Conference on Information and Knowledge Management \(CIKM\), KEIR Workshop, Oral/);
   assert.match(publicationsHtml, new RegExp(escapedPath("/media/publications/2026/2026-cikm-keir-compact-sparse-spaces.png")));
   assert.match(publicationsHtml, new RegExp(escapedPath("/media/publications/2026/2026-emnlp-hobit.png")));
@@ -201,7 +201,8 @@ test("restores the complete news archive and related links", async () => {
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-pearl")));
   assert.match(html, /EMNLP 2026 Demo/);
   assert.match(html, /EMNLP 2026/);
-  assert.match(html, /Accepted Paper[^]*?CIKM 2026 KEIR Workshop Oral/);
+  assert.match(html, /Accepted Paper[^]*?CIKM 2026 Workshop/);
+  assert.doesNotMatch(html, /CIKM 2026 KEIR Workshop Oral/);
   assert.ok(html.indexOf("2026-emnlp-pearl") < html.indexOf("2026-cikm-keir-compact-sparse-spaces"));
   assert.ok(html.indexOf("2026-cikm-keir-compact-sparse-spaces") < html.indexOf("2026-cikm-environment-conditioned"));
   assert.match(html, /ACL 2026 Findings/);

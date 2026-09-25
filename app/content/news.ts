@@ -27,7 +27,7 @@ const paper = (id: string, year: number, order: number, venue: string, title: st
 export const newsItems: NewsItem[] = [
   paper("2026-emnlp-hobit", 2026, 1, "EMNLP", "hoBIT: A Profile-Aware Retrieval-Augmented Chatbot for University Academic Advising", "EMNLP 2026 Demo"),
   paper("2026-emnlp-pearl", 2026, 2, "EMNLP", "PEARL: Front-Loading Relational Chains for Multi-Hop Table Retrieval", "EMNLP 2026"),
-  paper("2026-cikm-keir-compact-sparse-spaces", 2026, 3, "CIKM", "Concepts Complement Dense Semantics: Learning Compact Sparse Spaces for Text-Image Retrieval", "CIKM 2026 KEIR Workshop Oral"),
+  paper("2026-cikm-keir-compact-sparse-spaces", 2026, 3, "CIKM", "Concepts Complement Dense Semantics: Learning Compact Sparse Spaces for Text-Image Retrieval", "CIKM 2026 Workshop"),
   paper("2026-cikm-environment-conditioned", 2026, 4, "CIKM", "Beyond Observed Auxiliary Relations: Environment-Conditioned Modeling for Multi-Behavior Recommendation"),
   paper("2026-cikm-scord", 2026, 5, "CIKM", "SCoRD: Semantic-Assisted Continual Retriever-Reranker Distillation for LLM-Based Recommendation"),
   paper("2026-cikm-item-profiles", 2026, 6, "CIKM", "Profiling What Matters: Context-Aware Item Profiles from Large-Scale Metadata for LLM Recommenders"),
