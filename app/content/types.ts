@@ -1,4 +1,4 @@
-export type PersonGroup = "principal-investigator" | "student" | "undergraduate-intern";
+export type PersonGroup = "principal-investigator" | "student" | "industry-researcher" | "undergraduate-intern";
 export type PersonStatus = "current" | "alumni";
 
 export interface Person {

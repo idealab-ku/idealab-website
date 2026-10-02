@@ -1,9 +1,9 @@
 import { PageHero, SiteFrame } from "../components";
-import { alumni, convergenceStudents, currentInterns, currentStudents, principalInvestigator } from "../content/people";
+import { alumni, convergenceStudents, currentInterns, currentStudents, industryResearchers, principalInvestigator } from "../content/people";
 import { sitePath } from "../site-path";
 import { pageMetadata } from "../seo";
 
-export const metadata = pageMetadata({ title: "People", description: "Meet the faculty, graduate students, undergraduate researchers, and alumni of IDEA Lab at Korea University.", path: "/people" });
+export const metadata = pageMetadata({ title: "People", description: "Meet the faculty, students, industry researchers, undergraduate researchers, and alumni of IDEA Lab at Korea University.", path: "/people" });
 
 export default function People() {
   return <SiteFrame>
@@ -28,6 +28,19 @@ export default function People() {
     <section className="people-block shell">
       <div className="block-heading"><h2>Students</h2><span>{currentStudents.length} members</span></div>
       <div className="member-grid">{currentStudents.map((person) => <article className="member-card" key={person.id}>
+        <img src={sitePath(person.image)} alt={person.name} />
+        <div className="member-card-copy">
+          <h3 className="member-name">{person.name}{person.website && <a className="member-website-arrow" href={person.website} target="_blank" rel="noreferrer" aria-label={`${person.name} website`}>↗︎</a>}</h3>
+          <p className="role">{person.degree}</p>
+          <div className="member-links">
+            {person.email && <a href={`mailto:${person.email}`}>{person.email}</a>}
+          </div>
+        </div>
+      </article>)}</div>
+    </section>
+    <section className="people-block shell industry-researchers-block">
+      <div className="block-heading"><h2>Industry Researchers</h2><span>{industryResearchers.length} member</span></div>
+      <div className="member-grid">{industryResearchers.map((person) => <article className="member-card" key={person.id}>
         <img src={sitePath(person.image)} alt={person.name} />
         <div className="member-card-copy">
           <h3 className="member-name">{person.name}{person.website && <a className="member-website-arrow" href={person.website} target="_blank" rel="noreferrer" aria-label={`${person.name} website`}>↗︎</a>}</h3>

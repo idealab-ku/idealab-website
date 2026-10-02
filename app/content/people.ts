@@ -20,7 +20,7 @@ export const people: Person[] = [
   { id: "seunghan-lee", name: "Seunghan Lee", group: "student", status: "current", order: 2, role: "Graduate Student", degree: "M.S.–Ph.D.", email: "seunghanlee@korea.ac.kr", image: "/media/people/seunghan.jpg" },
   { id: "dojun-hwang", name: "Dojun Hwang", group: "student", status: "current", order: 3, role: "Graduate Student", degree: "B.S.–M.S.", email: "dojun2006@korea.ac.kr", website: "https://repo2x.com", image: "/media/people/dojun.jpg" },
   { id: "yoonseo-kim", name: "Yoonseo Kim", group: "student", status: "current", order: 4, role: "Graduate Student", degree: "B.S.–M.S.", email: "seo3167@korea.ac.kr", website: "https://hiyseo.com", image: "/media/people/yoonseo.jpg" },
-  { id: "youngjune-lee", name: "Youngjune Lee", group: "student", status: "current", order: 5, role: "Graduate Student", degree: "Ph.D.", email: "dudwns511@korea.ac.kr", website: "https://dudwns511.github.io/", image: "/media/people/youngjune.jpg" },
+  { id: "youngjune-lee", name: "Youngjune Lee", group: "industry-researcher", status: "current", order: 1, role: "Industry Researcher", degree: "Ph.D. (NAVER)", email: "dudwns511@korea.ac.kr", website: "https://dudwns511.github.io/", image: "/media/people/youngjune.jpg" },
   { id: "jeyun-lee", name: "Jeyun Lee", group: "undergraduate-intern", status: "current", order: 1, role: "Undergraduate Research Intern", image: "/media/people/jeyun-lee.jpg" },
   { id: "jeongwoo-choi", name: "Jeongwoo Choi", group: "undergraduate-intern", status: "current", order: 2, role: "Undergraduate Research Intern", image: "/media/people/jeongwoo.jpg" },
   { id: "donghyeok-kang", name: "Donghyeok Kang", group: "undergraduate-intern", status: "current", order: 3, role: "Undergraduate Research Intern", image: "/media/people/donghyeok.png" },
@@ -51,6 +51,7 @@ if (!currentPrincipalInvestigator) {
 
 export const principalInvestigator = currentPrincipalInvestigator;
 export const currentStudents = currentByGroup("student");
+export const industryResearchers = currentByGroup("industry-researcher");
 export const currentInterns = currentByGroup("undergraduate-intern");
 export const alumni = people.filter((person) => person.status === "alumni").sort((a, b) => a.order - b.order);
 
