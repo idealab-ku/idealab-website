@@ -132,7 +132,7 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.match(piHtml, /겸임 교수, 인공지능학과, 고려대학교/);
   assert.match(piHtml, /인공지능 \(2025S, 2026S\)/);
   assert.match(piHtml, /AI Star Fellowship \(AI최고급신진연구자지원\)/);
-  assert.doesNotMatch(piHtml, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술/);
+  assert.match(piHtml, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술 개발 · Samsung Electronics · 책임/);
   assert.doesNotMatch(piHtml, /기계학습 기반 의사결정 지원/);
   assert.match(piHtml, /<span>2026–2029<\/span><p>비공개 저자원 환경/);
   assert.match(piHtml, /class="profile-entry-full"[^>]*><a[^>]*>인공지능/);
@@ -199,7 +199,7 @@ assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2609\.32671/);
 test("restores the complete news archive and related links", async () => {
   const response = await render("/news");
   const html = await response.text();
-  assert.equal((html.match(/<article/g) ?? []).length, 43);
+  assert.equal((html.match(/<article/g) ?? []).length, 44);
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-hobit")));
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-pearl")));
   assert.match(html, /EMNLP 2026 Demo/);
@@ -231,8 +231,8 @@ test("presents research areas, major projects, and verified collaborators", asyn
   for (const topic of ["recommendation", "search-retrieval", "knowledge-mining"]) {
     assert.match(html, new RegExp(`${escapedPath("/publications")}\\?topics=${topic}#publication-filter`));
   }
-  assert.equal((html.match(/class="research-project-item"/g) ?? []).length, 5);
-  assert.equal((html.match(/class="research-project-role">책임</g) ?? []).length, 3);
+  assert.equal((html.match(/class="research-project-item"/g) ?? []).length, 6);
+  assert.equal((html.match(/class="research-project-role">책임</g) ?? []).length, 4);
   assert.equal((html.match(/class="research-project-role">참여</g) ?? []).length, 2);
   assert.equal((html.match(/class="collaborator-logo"/g) ?? []).length, 10);
   assert.match(html, /We are always open to a wide range of collaborations/);
@@ -241,14 +241,15 @@ test("presents research areas, major projects, and verified collaborators", asyn
   for (const period of ["2026–2029", "2025–2026", "2023–2024"]) {
     assert.match(html, new RegExp(period));
   }
-  assert.doesNotMatch(html, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술/);
+  assert.match(html, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술 개발/);
+  assert.match(html, /2026–2027/);
   assert.match(html, /AI Star Fellowship \(AI최고급신진연구자지원\)/);
   assert.match(html, /IITP/);
   assert.match(html, /2026–2031/);
   assert.match(html, /Samsung Electronics/);
   assert.match(html, /Mohamed bin Zayed University of Artificial Intelligence/);
   assert.match(html, /Academic and Industry Collaborators/);
-  assert.doesNotMatch(html, /기술 개발|>Collaborators<|Institutions and companies with which/);
+  assert.doesNotMatch(html, />Collaborators<|Institutions and companies with which/);
   assert.doesNotMatch(html, /기계학습 기반 의사결정 지원 기술/);
   assert.match(html, /University of Illinois Urbana-Champaign/);
   assert.match(html, /We research personalized intelligent systems that integrate multimodal knowledge sources and update effectively over time/);

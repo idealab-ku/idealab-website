@@ -49,6 +49,7 @@ export const piProfileSections: ProfileSection[] = [
   {
     title: "Talks",
     groups: [{ entries: [
+      { period: "2026", text: "‘Hierarchical Knowledge Indexing for Scientific AI’, 초청 강연, Samsung SAIT" },
       { period: "2026", text: "‘지식 구조화 기반 학술 논문 검색’, 데이터 인텔리전스 워크샵" },
       { period: "2026", text: "‘지식 구조화 기반 학술 논문 검색’, 컴퓨터공학과/인공지능학과 세미나, POSTECH" },
       { period: "2025", text: "‘추천 시스템의 지속 학습 기술’, 튜토리얼, ACM CIKM" },
@@ -75,6 +76,7 @@ export const piProfileSections: ProfileSection[] = [
         { period: "2026 – 2027", text: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)" },
         { period: "2026", text: "System Demonstration Track, Conference on Empirical Methods in Natural Language Processing (EMNLP)" },
         { period: "2027", text: "AAAI Conference on Artificial Intelligence (AAAI)" },
+        { period: "2027", text: "ACM International World-Wide Web Conference (WWW)" },
       ] },
       { heading: "Program Committee / Reviewer", entries: [
         { period: "2023 – 2026", text: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)" },
@@ -87,6 +89,7 @@ export const piProfileSections: ProfileSection[] = [
         { period: "2026", text: "ACM International Conference on Information and Knowledge Management (CIKM)" },
         { period: "2026", text: "IEEE International Conference on Data Mining (ICDM)" },
         { period: "2026", text: "ACM AI Summit" },
+        { period: "2027", text: "International Conference on Learning Representations (ICLR)" },
       ] },
       { heading: "Journal Reviewer", entries: [
         { text: "Transactions on Information Systems (TOIS)" },
