@@ -132,7 +132,7 @@ assert.match(peopleHtml, /Ph\.D\. @ UIUC/);
   assert.match(piHtml, /겸임 교수, 인공지능학과, 고려대학교/);
   assert.match(piHtml, /인공지능 \(2025S, 2026S\)/);
   assert.match(piHtml, /AI Star Fellowship \(AI최고급신진연구자지원\)/);
-  assert.match(piHtml, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술 개발 · Samsung Electronics · 책임/);
+  assert.match(piHtml, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술 · Samsung Electronics · 책임/);
   assert.doesNotMatch(piHtml, /기계학습 기반 의사결정 지원/);
   assert.match(piHtml, /<span>2026–2029<\/span><p>비공개 저자원 환경/);
   assert.match(piHtml, /class="profile-entry-full"[^>]*><a[^>]*>인공지능/);
@@ -241,7 +241,7 @@ test("presents research areas, major projects, and verified collaborators", asyn
   for (const period of ["2026–2029", "2025–2026", "2023–2024"]) {
     assert.match(html, new RegExp(period));
   }
-  assert.match(html, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술 개발/);
+  assert.match(html, /Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술/);
   assert.match(html, /2026–2027/);
   assert.match(html, /AI Star Fellowship \(AI최고급신진연구자지원\)/);
   assert.match(html, /IITP/);

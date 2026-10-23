@@ -33,7 +33,7 @@ export const researchAreas: ResearchArea[] = [
 
 const allMajorResearchProjects: MajorResearchProject[] = [
   { id: "iitp-ai-top-tier-emerging-researcher", title: "AI Star Fellowship (AI최고급신진연구자지원)", partner: "IITP", period: "2026–2031", role: "participant" },
-  { id: "scientific-ai-hierarchical-knowledge-graph-rag", title: "Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술 개발", partner: "Samsung Electronics", period: "2026–2027", role: "lead" },
+  { id: "scientific-ai-hierarchical-knowledge-graph-rag", title: "Scientific AI를 위한 과학 도메인 특화 계층적 Knowledge Graph 기반 RAG 기술", partner: "Samsung Electronics", period: "2026–2027", role: "lead" },
   { id: "private-resource-retrieval", title: "비공개 저자원 환경을 위한 개념 체계 구조화 기반 검색 및 지속 업데이트 기술", partner: "NRF", period: "2026–2029", role: "lead" },
   { id: "multimodal-knowledge-retrieval", title: "멀티모달 지식 구조화 기반 검색 고도화 기술", partner: "KT", period: "2025–2026", role: "lead" },
   { id: "real-world-recommendation-feature-selection", title: "실세계 추천 시스템을 위한 feature selection 기술", partner: "NAVER", period: "2023–2024", role: "lead" },
