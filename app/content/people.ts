@@ -25,7 +25,6 @@ export const people: Person[] = [
   { id: "jeongwoo-choi", name: "Jeongwoo Choi", group: "undergraduate-intern", status: "current", order: 2, role: "Undergraduate Research Intern", image: "/media/people/jeongwoo.jpg" },
   { id: "donghyeok-kang", name: "Donghyeok Kang", group: "undergraduate-intern", status: "current", order: 3, role: "Undergraduate Research Intern", image: "/media/people/donghyeok.png" },
   { id: "seongeun-lee", name: "Seongeun Lee", group: "undergraduate-intern", status: "current", order: 4, role: "Undergraduate Research Intern", image: "/media/people/seongeun.jpg" },
-  { id: "hobeom-kim", name: "Hobeom Kim", group: "undergraduate-intern", status: "current", order: 5, role: "Undergraduate Research Intern", image: "/media/people/hobeom.jpg" },
   {
     id: "gyuseok-lee",
     name: "Gyuseok Lee",

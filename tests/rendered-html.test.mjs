@@ -88,7 +88,6 @@ test("keeps required people and publication records visible", async () => {
     "Jeongwoo Choi",
     "Donghyeok Kang",
     "Seongeun Lee",
-    "Hobeom Kim",
   ];
 
   for (const name of requiredPeople) {
