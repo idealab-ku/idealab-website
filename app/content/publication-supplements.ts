@@ -1,4 +1,5 @@
 export const preprints = [
+  { title:"Self-Evolving Search Index", authors:"Sangam Lee, Wonjae Lee, Sunghwan Kim, Deogyong Kim, Jaehoon Kim, Daye Nam, SeongKu Kang, Dongha Lee", note:"An autonomous framework that diagnoses retrieval failures, refines index keys, and explores new queries to improve search indexes.", link:"https://arxiv.org/pdf/2609.19656" },
   { title:"MultiCube-RAG for Multi-hop Question Answering", authors:"Jimeng Shi, Wei Hu, Runchu Tian, Bowen Jin, Wonbin Kweon, SeongKu Kang, Yunfan Kang, Dingqi Ye, Sizhe Zhou, Shaowen Wang, Jiawei Han", note:"A training-free method consisting of multiple cubes for multi-step reasoning and retrieval.", link:"https://arxiv.org/pdf/2602.15898" },
   { title:"Graph Signal Processing for Cross-Domain Recommendation", authors:"Jeongeun Lee, SeongKu Kang, Won-Yong Shin, Jeongwhan Choi, Noseong Park, Dongha Lee", note:"A unified cross-domain recommendation framework based on graph signal processing.", link:"https://arxiv.org/pdf/2407.12374" },
 ];
