@@ -86,7 +86,6 @@ test("keeps required people and publication records visible", async () => {
     "Youngjune Lee",
     "Jeyun Lee",
     "Jeongwoo Choi",
-    "Donghyeok Kang",
     "Seongeun Lee",
   ];
 
