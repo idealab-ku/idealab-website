@@ -11,6 +11,7 @@ export const featuredEvents: FeaturedEvent[] = [
 
 export const labLifeEvents: LabLifeEvent[] = [
   { id: "emnlp-2026-11", title: "EMNLP 2026 · 2026.11", image: "/media/lab-life/2026-11-emnlp-demo.jpg" },
+  { id: "emnlp-2026-11-welcome", title: "EMNLP 2026 · 2026.11", image: "/media/lab-life/2026-11-emnlp-welcome.jpg" },
   { id: "ai-tech-day-2026-10", title: "AI Tech Day · 2026.10", image: "/media/lab-life/2026-10-ai-tech-day.jpg" },
   { id: "ai-tech-day-2026-10-demo-award", title: "AI Tech Day · 2026.10", image: "/media/lab-life/2026-10-ai-tech-day-demo-award.jpg" },
   { id: "joint-workshop-2026-08", title: "Joint workshop · 2026.08", image: "/media/lab-life/2026-08-joint-workshop.jpg" },
