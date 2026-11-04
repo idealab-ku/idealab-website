@@ -25,6 +25,7 @@ const paper = (id: string, year: number, order: number, venue: string, title: st
 };
 
 export const newsItems: NewsItem[] = [
+  { id:"2027-professional-service", year:2027, order:1, category:"Service", title:"Prof. Kang was invited to serve as an Area Chair / Senior Program Committee member for KDD, AAAI, and WWW, and as a reviewer for ICLR.", href:"/people/pi" },
   { id:"2026-sait-scientific-ai-talk", year:2026, order:0, category:"Talk", title:"Invited talk: “Hierarchical Knowledge Indexing for Scientific AI”, Samsung SAIT", href:"/people/pi" },
   paper("2026-emnlp-hobit", 2026, 1, "EMNLP", "hoBIT: A Profile-Aware Retrieval-Augmented Chatbot for University Academic Advising", "EMNLP 2026 Demo"),
   paper("2026-emnlp-pearl", 2026, 2, "EMNLP", "PEARL: Front-Loading Relational Chains for Multi-Hop Table Retrieval", "EMNLP 2026"),
@@ -51,7 +52,7 @@ export const newsItems: NewsItem[] = [
   paper("2026-www-pairsem", 2026, 23, "WWW", "PairSem: LLM-Guided Pairwise Semantic Matching for Scientific Retrieval"),
   paper("2026-kdd-cream", 2026, 24, "KDD", "CREAM: Continual Retrieval on Dynamic Streaming Corpora with Adaptive Soft Memory"),
   paper("2026-tkde-bpl", 2026, 25, "TKDE", "BPL: Bias-adaptive Preference Distillation Learning for Recommender System"),
-  { id:"2026-professional-service", year:2026, order:26, category:"Service", title:"Prof. Kang was invited as an Area Chair of KDD and the EMNLP System Demonstration Track, and to program committees including AAAI, SIGIR, NeurIPS, CIKM, ICDM, SIGIR-AP, and ACM AI Summit.", href:"/people/pi" },
+  { id:"2026-professional-service", year:2026, order:26, category:"Service", title:"Prof. Kang was invited as an Area Chair of KDD and the EMNLP System Demonstration Track, and to program committees including AAAI, SIGIR, CVPR, NeurIPS, CIKM, ICDM, SIGIR-AP, and ACM AI Summit.", href:"/people/pi" },
 
   { id:"2025-ai-seoultech-scholarship", year:2025, order:1, category:"Scholarship", title:"Seunghan was selected as a recipient of the AI SeoulTech Scholarship!" },
   { id:"2025-seoktop-ai", year:2025, order:2, category:"Award", title:"Prof. Kang received the Seoktop Lecture Award (Artificial Intelligence) from Korea University.", href:"/people/pi" },

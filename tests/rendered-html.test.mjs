@@ -197,7 +197,7 @@ assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2609\.32671/);
 test("restores the complete news archive and related links", async () => {
   const response = await render("/news");
   const html = await response.text();
-  assert.equal((html.match(/<article/g) ?? []).length, 44);
+  assert.equal((html.match(/<article/g) ?? []).length, 45);
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-hobit")));
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-pearl")));
   assert.match(html, /EMNLP 2026 Demo/);
