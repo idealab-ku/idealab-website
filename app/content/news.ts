@@ -25,7 +25,7 @@ const paper = (id: string, year: number, order: number, venue: string, title: st
 };
 
 export const newsItems: NewsItem[] = [
-  { id:"2027-professional-service", year:2027, order:1, category:"Service", title:"Prof. Kang was invited to serve as an Area Chair / Senior Program Committee member for KDD, AAAI, and WWW, and as a reviewer for ICLR.", href:"/people/pi" },
+  { id:"2027-professional-service", year:2027, order:1, category:"Service", title:"Prof. Kang was invited to serve as an Area Chair / Senior Program Committee for KDD, AAAI, and WWW, and as a Program Committee for ICLR.", href:"/people/pi" },
   { id:"2026-sait-scientific-ai-talk", year:2026, order:0, category:"Talk", title:"Invited talk: “Hierarchical Knowledge Indexing for Scientific AI”, Samsung SAIT", href:"/people/pi" },
   paper("2026-emnlp-hobit", 2026, 1, "EMNLP", "hoBIT: A Profile-Aware Retrieval-Augmented Chatbot for University Academic Advising", "EMNLP 2026 Demo"),
   paper("2026-emnlp-pearl", 2026, 2, "EMNLP", "PEARL: Front-Loading Relational Chains for Multi-Hop Table Retrieval", "EMNLP 2026"),
