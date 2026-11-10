@@ -105,6 +105,7 @@ export interface LabLifeEvent {
   id: string;
   title: string;
   image: string;
+  cropTop?: boolean;
 }
 
 export interface FeaturedEvent {

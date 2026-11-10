@@ -393,3 +393,4 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
   .brand img{width:206px;height:48px}
   .application-instructions span{overflow-wrap:anywhere}
 }
+.gallery-photo-crop{aspect-ratio:4/3;overflow:hidden;border-radius:11px}.gallery-photo-crop img{display:block;transform:scale(1.35);transform-origin:center bottom}
