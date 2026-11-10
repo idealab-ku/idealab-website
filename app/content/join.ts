@@ -47,8 +47,12 @@ export const faqItems: FaqItem[] = [
     id: "undergraduate-applications",
     question: "Can undergraduate students apply to join your research group?",
     content: [
-      { type: "paragraph", text: "Yes, undergraduate students are welcome to apply to join our research group as interns. We offer opportunities for undergraduate students to gain research experience and contribute to ongoing research projects. Applicants should have a background in machine learning and deep learning." },
-      { type: "paragraph", text: "Undergraduate internships are offered twice a year, starting during the summer and winter academic breaks. The default duration of the internship corresponds to the break period, and any extension beyond that will be determined by mutual agreement. Applications should be submitted via email and may close early depending on the number of applicants." },
+      { type: "paragraph", text: "Yes, undergraduate students are welcome to join our research group as interns." },
+      { type: "list", items: [
+        "Eligibility: Internships are intended for students who wish to join our research group and conduct research with us. We recommend joining in your third or fourth year. Most of our current members joined between the summer and winter breaks of their third year.",
+        "Preparation: We encourage you to study the “Course and online class references” linked above before starting. A foundation in machine learning and deep learning will help you begin research right away. You do not need to master everything, but advance preparation will help.",
+        "How to apply: Please email your CV and intended graduate enrollment date (year and semester). Internships begin during the summer and winter breaks and typically last for the break period, with extensions by mutual agreement. Applications may close early depending on the number of applicants.",
+      ] },
     ],
   },
 ];
