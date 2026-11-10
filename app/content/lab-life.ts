@@ -10,6 +10,8 @@ export const featuredEvents: FeaturedEvent[] = [
 ];
 
 export const labLifeEvents: LabLifeEvent[] = [
+  { id: "cikm-2026-11-group", title: "CIKM 2026 · 2026.11", image: "/media/lab-life/2026-11-cikm-group.jpg" },
+  { id: "cikm-2026-11-dinner", title: "CIKM 2026 · 2026.11", image: "/media/lab-life/2026-11-cikm-dinner.jpg" },
   { id: "cikm-keir-workshop-2026-11", title: "KEIR Workshop @ CIKM 2026 · 2026.11", image: "/media/lab-life/2026-11-cikm-keir-workshop.jpg", cropTop: true },
   { id: "emnlp-2026-11", title: "EMNLP 2026 · 2026.11", image: "/media/lab-life/2026-11-emnlp-demo.jpg" },
   { id: "emnlp-2026-11-welcome", title: "EMNLP 2026 · 2026.11", image: "/media/lab-life/2026-11-emnlp-welcome.jpg" },
