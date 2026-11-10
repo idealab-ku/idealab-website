@@ -51,7 +51,7 @@ export const faqItems: FaqItem[] = [
       { type: "list", items: [
         "Eligibility: Internships are intended for students who wish to join our research group and conduct research with us. We recommend joining in your third or fourth year. Most of our current members joined between the summer and winter breaks of their third year.",
         "Preparation: We encourage you to study the “Course and online class references” linked above before starting. A foundation in machine learning and deep learning will help you begin research right away. You do not need to master everything, but advance preparation will help.",
-        "How to apply: Please email your CV and intended graduate enrollment date (year and semester). Internships begin during the summer and winter breaks and typically last for the break period, with extensions by mutual agreement. Applications may close early depending on the number of applicants.",
+        "How to apply: Please email your academic transcript and intended graduate enrollment date (year and semester). Internships begin during the summer and winter breaks and typically last for the break period, with extensions by mutual agreement. Applications may close early depending on the number of applicants.",
       ] },
     ],
   },
