@@ -36,7 +36,7 @@ export const faqItems: FaqItem[] = [
       { type: "paragraph", text: "If you are simply seeking to obtain a graduate degree, no matter how strong your academic background or GPA may be, we are respectfully not interested in working with you." },
       { type: "paragraph", text: "We strongly recommend individuals who are interested in joining our research group to complete an internship with us before applying for a graduate research position. This will give you the opportunity to learn more about our research and determine if it is the right fit for you." },
     ],
-    link: { label: "Course and online class references", href: "https://docs.google.com/document/d/1J1jIGxF-mzG6hZIttRx_J6h3oFI66G1M2wuGuLD1zEk/edit?usp=sharing" },
+    link: { label: "Study materials", href: "https://docs.google.com/document/d/1J1jIGxF-mzG6hZIttRx_J6h3oFI66G1M2wuGuLD1zEk/edit?usp=sharing" },
   },
   {
     id: "mentorship",
@@ -50,7 +50,7 @@ export const faqItems: FaqItem[] = [
       { type: "paragraph", text: "Yes, undergraduate students are welcome to join our research group as interns." },
       { type: "list", items: [
         "Eligibility: Internships are intended for students who wish to join our research group and conduct research with us. We recommend joining in your third or fourth year. Most of our current members joined between the summer and winter breaks of their third year.",
-        "Preparation: We encourage you to study the “Course and online class references” linked above before starting. A foundation in machine learning and deep learning will help you begin research right away. You do not need to master everything, but advance preparation will help.",
+        "Preparation: We encourage you to study the “Study materials” linked above before starting. A foundation in machine learning and deep learning will help you begin research right away. You do not need to master everything, but advance preparation will help.",
         "How to apply: Please email your academic transcript and intended graduate enrollment date (year and semester). Internships begin during the summer and winter breaks and typically last for the break period, with extensions by mutual agreement. Applications may close early depending on the number of applicants.",
       ] },
     ],
