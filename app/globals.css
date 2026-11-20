@@ -173,6 +173,7 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
 .news-list article{min-height:96px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 140px;gap:22px;align-items:center;padding:12px 0}
 .news-list article:not(:has(img)){grid-template-columns:1fr}
 .news-list p{font-size:16px;line-height:1.5;margin:7px 0 0;font-weight:600}
+.news-inline-link{color:var(--teal-dark);text-decoration:underline;text-underline-offset:3px}
 .news-list img{width:140px;height:72px;object-fit:cover;border-radius:9px}
 
 .course-list{padding:0 0 72px}

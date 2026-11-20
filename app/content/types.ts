@@ -34,6 +34,7 @@ export interface NewsItem {
   title: string;
   image?: string;
   href?: string;
+  linkLabel?: string;
   order: number;
 }
 

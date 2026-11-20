@@ -14,4 +14,10 @@ export function PageHero({ index, eyebrow, title, intro }: { index:string; eyebr
   return <section className="page-hero shell"><span className="page-index">{index}</span>{eyebrow !== title && <span className="page-eyebrow">{eyebrow}</span>}<h1>{title}</h1><p>{intro}</p></section>;
 }
 
+export function NewsTitle({ title, href, linkLabel }: { title: string; href?: string; linkLabel?: string }) {
+  if (!href) return <>{title}</>;
+  if (linkLabel) return <>{title}: <a className="news-inline-link" href={sitePath(href)}>{linkLabel}</a></>;
+  return <a href={sitePath(href)}>{title}</a>;
+}
+
 export function SiteFrame({ children }: { children: React.ReactNode }) { return <><Header /><main>{children}</main><Footer /></>; }

@@ -197,7 +197,10 @@ assert.match(publicationsHtml, /https:\/\/arxiv\.org\/pdf\/2609\.32671/);
 test("restores the complete news archive and related links", async () => {
   const response = await render("/news");
   const html = await response.text();
-  assert.equal((html.match(/<article/g) ?? []).length, 45);
+  assert.equal((html.match(/<article/g) ?? []).length, 46);
+  assert.match(html, /class="news-type">Media/);
+  assert.match(html, /Our profile-aware RAG research for university academic advising was featured in the media(?:<!-- -->)?: <a class="news-inline-link" href="https:\/\/www\.asiae\.co\.kr\/article\/education\/2026111911102088506">link<\/a>/);
+  assert.match(html, new RegExp(escapedPath("/media/publications/2026/2026-emnlp-hobit.png")));
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-hobit")));
   assert.match(html, new RegExp(escapedPath("/publications#2026-emnlp-pearl")));
   assert.match(html, /EMNLP 2026 Demo/);
