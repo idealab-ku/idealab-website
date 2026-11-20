@@ -230,6 +230,9 @@ test("presents research areas, major projects, and verified collaborators", asyn
     assert.match(html, new RegExp(`${escapedPath("/publications")}\\?topics=${topic}#publication-filter`));
   }
   assert.equal((html.match(/class="research-project-item"/g) ?? []).length, 6);
+  assert.match(html, /class="research-project-group-title">Ongoing/);
+  assert.match(html, /class="research-project-group-title">Completed/);
+  assert.match(html, /Ongoing[\s\S]*IITP[\s\S]*Samsung Electronics[\s\S]*NRF[\s\S]*Completed[\s\S]*KT[\s\S]*NAVER[\s\S]*Microsoft Research Asia/);
   assert.equal((html.match(/class="research-project-role">책임</g) ?? []).length, 4);
   assert.equal((html.match(/class="research-project-role">참여</g) ?? []).length, 2);
   assert.equal((html.match(/class="collaborator-logo"/g) ?? []).length, 10);

@@ -1,5 +1,5 @@
 import { PageHero, SiteFrame } from "../components";
-import { majorResearchProjects, researchAreas, researchCollaborators } from "../content/research";
+import { completedMajorResearchProjects, ongoingMajorResearchProjects, researchAreas, researchCollaborators } from "../content/research";
 import { sitePath } from "../site-path";
 import { pageMetadata } from "../seo";
 
@@ -31,16 +31,22 @@ export default function Research() {
           <h2 id="major-projects-heading">Major R&amp;D Projects</h2>
           <p>We are always open to a wide range of collaborations.</p>
         </div>
-        <ul className="research-project-list">
-          {majorResearchProjects.map((project) => <li className="research-project-item" key={project.id}>
-            <h3>{project.title}</h3>
-            <p className="research-project-meta">
-              <span className="research-project-partner">{project.partner}</span>
-              <span className="research-project-role">{project.role === "lead" ? "책임" : "참여"}</span>
-              <span className="research-project-period">{project.period}</span>
-            </p>
-          </li>)}
-        </ul>
+        {[
+          { label: "Ongoing", projects: ongoingMajorResearchProjects },
+          { label: "Completed", projects: completedMajorResearchProjects },
+        ].map((group) => <div className="research-project-group" key={group.label}>
+          <h3 className="research-project-group-title">{group.label}</h3>
+          <ul className="research-project-list">
+            {group.projects.map((project) => <li className="research-project-item" key={project.id}>
+              <h3>{project.title}</h3>
+              <p className="research-project-meta">
+                <span className="research-project-partner">{project.partner}</span>
+                <span className="research-project-role">{project.role === "lead" ? "책임" : "참여"}</span>
+                <span className="research-project-period">{project.period}</span>
+              </p>
+            </li>)}
+          </ul>
+        </div>)}
       </div>
     </section>
 
