@@ -3,6 +3,7 @@ export const publicRoutes = [
   "/research",
   "/people",
   "/people/pi",
+  "/people/pi/cv-of-failure",
   "/people/schedule",
   "/publications",
   "/publication",

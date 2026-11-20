@@ -398,3 +398,16 @@ nav a:hover{color:var(--teal-dark);border-color:var(--teal)}
   .application-instructions span{overflow-wrap:anywhere}
 }
 .gallery-photo-crop{aspect-ratio:4/3;overflow:hidden;border-radius:11px}.gallery-photo-crop img{display:block;transform:scale(1.35);transform-origin:center bottom}
+
+.failure-page{padding-bottom:88px}
+.failure-intro{margin:0 0 52px;font-size:18px;line-height:1.8;color:#000}
+.failure-intro p{margin:0 0 10px}
+.failure-section{margin-bottom:60px}
+.failure-section h2{margin:0;padding-bottom:18px;border-bottom:2px solid var(--teal);font-size:16px;line-height:1.6;font-weight:750;letter-spacing:.055em;scroll-margin-top:96px}
+.failure-papers,.failure-history,.failure-grants{list-style:none;margin:0;padding:0}
+.failure-papers>li{padding:24px 0;border-bottom:1px solid var(--line)}
+.failure-papers h3{margin:0 0 12px;font-size:16px;line-height:1.6;font-weight:400;overflow-wrap:anywhere}
+.failure-history{border-left:2px solid var(--line);padding-left:18px;color:#697382;font-size:16px;line-height:1.7}
+.failure-history li+li{margin-top:2px}
+.failure-grants li{padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.65;word-break:keep-all;overflow-wrap:anywhere}
+@media(max-width:520px){.failure-intro{margin-bottom:36px}.failure-section{margin-bottom:44px}.failure-page{padding-bottom:60px}}

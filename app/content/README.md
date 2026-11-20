@@ -10,6 +10,7 @@ The public pages render from the typed modules in this directory.
 - `teaching.ts` and `course-details.ts`: maintain the course index and its linked course pages.
 - `lab-life.ts`: maintain Events cards and gallery records. Use a descriptive event image filename rather than numbered names. Event detail pages live under `app/events/` and `app/research/`.
 - `tutorials.ts`, `research.ts`, and `join.ts`: maintain the corresponding page content.
+- `cv-of-failure.ts`: curated display text for SeongKu Kang's CV of Failure at `/people/pi/cv-of-failure`. Keep paper histories chronological and entries in the curated newest-first order. Update linked histories when a paper is accepted or published; omit ongoing submissions and private evidence. Local source data is managed separately from this website repository. Publication still requires review and explicit approval.
 
 Keep media paths explicit and reuse only images already approved for public display. Do not add unverified titles, dates, affiliations, or contact details.
 

@@ -18,6 +18,7 @@ export default function People() {
           <p>{principalInvestigator.affiliation?.map((line, index) => <span key={line}>{index > 0 && <br />}{line}</span>)}</p>
           <div className="pi-links">
             <a href={sitePath("/people/pi")}>Full profile →</a>
+            <a href={sitePath("/people/pi/cv-of-failure")}>CV of Failure</a>
             <a href={sitePath("/people/schedule")}>Schedule →</a>
             {principalInvestigator.email && <a href={`mailto:${principalInvestigator.email}`}>Email <span className="link-arrow" aria-hidden="true">↗︎</span></a>}
             <a href="https://scholar.google.com/citations?user=fB0K-fMAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar <span className="link-arrow" aria-hidden="true">↗︎</span></a>

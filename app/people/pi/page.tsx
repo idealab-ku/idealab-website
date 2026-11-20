@@ -50,6 +50,7 @@ export default function Pi() {
           <a href={sitePath("/people/schedule")}>Schedule</a>
           <a href="https://korea-ac-kr.zoom.us/j/6612575958?pwd=EB5n5pKMihQ7OT8oYeJLrrf1H1N2hf.1" target="_blank" rel="noreferrer">Zoom</a>
           <a href="https://seongku-kang.github.io/data/CV_SeongKuKang.pdf" target="_blank" rel="noreferrer">CV</a>
+          <a href={sitePath("/people/pi/cv-of-failure")}>CV of Failure</a>
           <a href="https://scholar.google.com/citations?user=fB0K-fMAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
         </div>
       </aside>
