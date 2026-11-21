@@ -226,14 +226,14 @@ export const failurePapers = [
 ];
 
 export const failureGrants = [
-  "KISTI 슈퍼컴 6호기 R&D혁신 프로그램 (1차) (2026)",
-  "포스텍–고려대 공동연구과제 Co-Seed Funding (2026)",
-  "한국콘텐츠진흥원 문화예술온톨로지기반LLM연계기술개발 (2026)",
-  "고려대학교–DGIST 기획 연구과제(Co-Seed Funding) (2026)",
-  "한국연구재단 AI 기반 대학 과학기술 혁신사업(AI4S&T) (2026)",
-  "NIPA/KAIT 고성능컴퓨팅 GPU 지원사업 (2025)",
-  "한국연구재단 신진연구 (2025)",
-  "Meta internship (2021)",
-  "Microsoft Research Asia Fellowship (2021)",
-  "NAVER PhD Fellowship (2020)"
+  "KISTI 슈퍼컴 6호기 R&D혁신 프로그램 (1차) 탈락 (2026)",
+  "포스텍–고려대 공동연구과제 Co-Seed Funding 탈락 (2026)",
+  "한국콘텐츠진흥원 문화예술온톨로지기반LLM연계기술개발 탈락 (2026)",
+  "고려대학교–DGIST 기획 연구과제(Co-Seed Funding) 탈락 (2026)",
+  "한국연구재단 AI 기반 대학 과학기술 혁신사업(AI4S&T) 탈락 (2026)",
+  "NIPA/KAIT 고성능컴퓨팅 GPU 지원사업 탈락 (2025)",
+  "한국연구재단 신진연구 탈락 (2025)",
+  "Meta internship 탈락 (2021)",
+  "Microsoft Research Asia Fellowship 탈락 (2021)",
+  "NAVER PhD Fellowship 탈락 (2020)"
 ];
