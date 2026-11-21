@@ -230,6 +230,7 @@ export const failureGrants = [
   "포스텍–고려대 공동연구과제 Co-Seed Funding (2026)",
   "한국콘텐츠진흥원 문화예술온톨로지기반LLM연계기술개발 (2026)",
   "고려대학교–DGIST 기획 연구과제(Co-Seed Funding) (2026)",
+  "한국연구재단 AI 기반 대학 과학기술 혁신사업(AI4S&T) (2026)",
   "NIPA/KAIT 고성능컴퓨팅 GPU 지원사업 (2025)",
   "한국연구재단 신진연구 (2025)",
   "Meta internship (2021)",
