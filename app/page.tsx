@@ -7,7 +7,7 @@ import { sitePath } from "./site-path";
 
 export const metadata = pageMetadata({
   title: "IDEA Lab — Korea University",
-  description: "IDEA Lab at Korea University researches recommender systems, information retrieval, data mining, personalization, and large language models.",
+  description: "IDEA Lab at Korea University researches knowledge structuring and evolution, information retrieval, and recommender systems.",
   path: "/",
   image: "/favicon-512.png",
 });
@@ -46,9 +46,9 @@ export default function Home() {
           url: siteInfo.universityUrl,
         },
         knowsAbout: [
-          "Recommender systems",
+          "Knowledge structuring and evolution",
           "Information retrieval",
-          "Data mining",
+          "Recommender systems",
           "Personalization",
           "Large language models",
         ],
@@ -68,7 +68,7 @@ export default function Home() {
       <div className="home-news" role="region" aria-label="Recent news. Scroll vertically for more updates.">{recentNews.map((item)=><article className={item.image ? "" : "news-without-image"} key={item.id}><div className="news-copy"><div className="news-meta"><span className="news-type">{item.category}</span><span className="news-meta-separator" aria-hidden="true">·</span><span className="news-date">{item.venueLabel ?? (item.venue ? `${item.venue} ${item.year}` : item.year)}</span></div><p><NewsTitle title={item.title} href={item.href} linkLabel={item.linkLabel} /></p></div>{item.image && <img src={sitePath(item.image)} alt="" />}</article>)}</div></div>
     </section>
 
-    <section className="home-section research-overview shell"><h2>Research Areas</h2><p className="section-intro">We explore three connected research directions for intelligent information systems.</p><div className="area-cards">
+    <section className="home-section research-overview shell"><h2>Research Areas</h2><p className="section-intro">We structure and continually refine knowledge to help people find relevant information and discover what matters to them.</p><div className="area-cards">
       {researchAreas.map((area)=><a href={sitePath(`/research#${area.id}`)} key={area.id}><h3>{area.title}</h3><ul className="home-research-topics">{area.topics.map((topic)=><li key={topic}>{topic}</li>)}</ul><span>Learn more →</span></a>)}
     </div></section>
 

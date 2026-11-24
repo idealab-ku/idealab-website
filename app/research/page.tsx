@@ -3,16 +3,16 @@ import { completedMajorResearchProjects, ongoingMajorResearchProjects, researchA
 import { sitePath } from "../site-path";
 import { pageMetadata } from "../seo";
 
-export const metadata = pageMetadata({ title: "Research", description: "Research at IDEA Lab on recommender systems, information retrieval, data mining, personalization, multimodal learning, and large language models.", path: "/research" });
+export const metadata = pageMetadata({ title: "Research", description: "Research at IDEA Lab on knowledge structuring and evolution, information retrieval, and recommender systems.", path: "/research" });
 
 export default function Research() {
   return <SiteFrame>
-    <PageHero index="01" eyebrow="Research" title="Research" intro="We work across recommendation, retrieval, and data mining." />
+    <PageHero index="01" eyebrow="Research" title="Research" intro="We work across knowledge structuring and evolution, information retrieval, and recommendation." />
 
     <section className="research-areas-simple shell" aria-labelledby="research-areas-heading">
       <div className="research-section-intro">
         <h2 id="research-areas-heading">Research areas</h2>
-        <p>We research personalized intelligent systems that integrate multimodal knowledge sources and update effectively over time.</p>
+        <p>We structure and continually refine knowledge to help people find relevant information and discover what matters to them.</p>
       </div>
       <div className="research-area-columns">
         {researchAreas.map((area) => <article className="research-area-summary" id={area.id} key={area.id}>

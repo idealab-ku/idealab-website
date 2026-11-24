@@ -256,15 +256,16 @@ test("presents research areas, major projects, and verified collaborators", asyn
   assert.doesNotMatch(html, />Collaborators<|Institutions and companies with which/);
   assert.doesNotMatch(html, /기계학습 기반 의사결정 지원 기술/);
   assert.match(html, /University of Illinois Urbana-Champaign/);
-  assert.match(html, /We research personalized intelligent systems that integrate multimodal knowledge sources and update effectively over time/);
-  assert.equal((html.match(/>Multimodal Learning</g) ?? []).length, 3);
+  assert.match(html, /We structure and continually refine knowledge to help people find relevant information and discover what matters to them/);
   for (const topic of [
     "Agentic Search",
     "Graph RAG",
     "Ontology Construction",
     "User Simulation",
     "Personalization",
-    "Multimodal Learning",
+    "Multimodal Knowledge",
+    "Multimodal Retrieval",
+    "Multimodal Recommendation",
   ]) {
     assert.match(html, new RegExp(topic));
   }
