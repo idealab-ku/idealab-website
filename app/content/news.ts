@@ -25,6 +25,7 @@ const paper = (id: string, year: number, order: number, venue: string, title: st
 };
 
 export const newsItems: NewsItem[] = [
+  { id:"2027-seoktop-ai", year:2027, order:0, category:"Award", title:"Prof. Kang received the Seoktop Lecture Award (Artificial Intelligence) from Korea University.", href:"/people/pi" },
   { id:"2027-professional-service", year:2027, order:1, category:"Service", title:"Prof. Kang was invited to serve as an Area Chair / Senior Program Committee for KDD, AAAI, and WWW, and as a Program Committee for ICLR.", href:"/people/pi" },
   { id:"2026-profill-media", year:2026, order:-1, category:"Media", title:"Our profile-aware RAG research for university academic advising was featured in the media", image:"/media/news/2026-profill-media-coverage.jpg", href:"https://news.naver.com/article/277/0005845629?sid=102", linkLabel:"link" },
   { id:"2026-sait-scientific-ai-talk", year:2026, order:0, category:"Talk", title:"Invited talk: “Hierarchical Knowledge Indexing for Scientific AI”, Samsung SAIT", href:"/people/pi" },

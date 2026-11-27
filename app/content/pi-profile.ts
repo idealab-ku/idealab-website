@@ -33,6 +33,7 @@ export const piProfileSections: ProfileSection[] = [
   {
     title: "Awards and Distinctions",
     groups: [{ entries: [
+      { period: "2027", text: "석탑 강의상 (인공지능), 고려대학교" },
       { period: "2026", text: "석탑 강의상 (빅데이터분석), 고려대학교" },
       { period: "2025", text: "석탑 강의상 (인공지능), 고려대학교" },
       { period: "2025", text: "Best Papers of WSDM 2025 선정" },
